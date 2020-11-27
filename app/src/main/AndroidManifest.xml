@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="allcom.example.attensanceapplication">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Attendance Application"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".report"></activity>
+        <activity android:name=".View_attendanec_report" />
+        <activity android:name=".Update_Page" />
+        <activity android:name=".View_edit_Details" />
+        <activity android:name=".Student_details" />
+        <activity android:name=".Add_Class" />
+        <activity android:name=".Teacher_Details" />
+        <activity android:name=".Admin" />
+        <activity android:name=".Marked" />
+        <activity android:name=".Scan" />
+        <activity android:name=".Day_date_student" />
+        <activity android:name=".Teacher_list" />
+        <activity android:name=".Subject_selet_student" />
+        <activity android:name=".Present_absent_list" />
+        <activity android:name=".Class_division_select" />
+        <activity android:name=".Select_Division" />
+        <activity android:name=".Select_new_branch" />
+        <activity android:name=".Select_year_teacher" />
+        <activity android:name=".Otp_Page" />
+        <activity android:name=".Create_new_Password" />
+        <activity android:name=".Forgot_Password" />
+        <activity android:name=".New_user_signUp" />
+        <activity android:name=".Login_Page">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

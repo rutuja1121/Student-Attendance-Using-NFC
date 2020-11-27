@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".New_user_signUp"
+android:background="#3B7393">
+
+<TextView
+    android:id="@+id/CreateNew"
+    android:layout_width="350dp"
+    android:layout_height="50dp"
+    android:background="#FFFF"
+    android:textColor="#0C0C0C"
+    android:text="Create New Account"
+    android:textSize="30dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.737"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.038" />
+
+    <EditText
+        android:id="@+id/Name3"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:background="#FFFF"
+        android:ems="10"
+        android:hint="Enter Name"
+        android:inputType="textPersonName"
+        android:textSize="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.603"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.134" />
+
+    <EditText
+    android:id="@+id/Email3"
+    android:layout_width="300dp"
+    android:layout_height="40dp"
+    android:background="#FFFF"
+    android:ems="10"
+    android:hint="Enter Email"
+    android:inputType="textEmailAddress"
+    android:textSize="24dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.603"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.209" />
+
+<EditText
+    android:id="@+id/PhoneNumber3"
+    android:layout_width="300dp"
+    android:layout_height="40dp"
+    android:background="#FFFF"
+    android:ems="10"
+    android:hint="Enter Phone Number"
+    android:inputType="phone"
+    android:textSize="24dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.603"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.283" />
+
+<EditText
+    android:id="@+id/Password3"
+    android:layout_width="300dp"
+    android:layout_height="40dp"
+    android:background="#FFFF"
+    android:ems="10"
+    android:hint="Enter Password"
+    android:inputType="textPassword"
+    android:textSize="24dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.603"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.357" />
+
+<EditText
+    android:id="@+id/ReEnterPassword3"
+    android:layout_width="300dp"
+    android:layout_height="40dp"
+    android:background="#FFFF"
+    android:ems="10"
+
+    android:hint="Re-enter Password"
+    android:inputType="textPassword"
+    android:textSize="24dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.603"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.428" />
+
+    <Spinner
+        android:id="@+id/Academicyear"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:background="#FFFF"
+        android:entries="@array/academcicYear"
+        android:spinnerMode="dropdown"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.603"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.646" />
+
+    <EditText
+    android:id="@+id/AcademicYear3"
+    android:layout_width="300dp"
+    android:layout_height="40dp"
+    android:background="#FFFF"
+    android:ems="10"
+    android:hint="Academic Year"
+    android:inputType="textPersonName"
+    android:textSize="24dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.603"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.499" />
+
+    <TextView
+        android:id="@+id/Category3"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:textColor="#0C0C0C"
+        android:textAlignment="center"
+        android:text="- - - Select Category - - -"
+        android:textSize="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.603"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.72" />
+
+    <Button
+        android:id="@+id/SubmitButton3"
+        android:layout_width="179dp"
+        android:layout_height="59dp"
+        android:background="#47C54C"
+        android:text="SUBMIT"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976" />
+
+    <RadioGroup
+        android:layout_width="93dp"
+        android:layout_height="100dp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.868">
+
+
+        <RadioButton
+            android:id="@+id/StudentButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Student"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.48"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.786" />
+
+        <RadioButton
+            android:id="@+id/TeacherButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Teacher"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.483"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            app:layout_constraintVertical_bias="0.832" />
+
+        <RadioButton
+            android:id="@+id/AdminButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Admin"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.474"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            app:layout_constraintVertical_bias="0.878" />
+    </RadioGroup>
+
+    <EditText
+    android:id="@+id/NfcTag3"
+    android:layout_width="300dp"
+    android:layout_height="40dp"
+    android:background="#FFFF"
+    android:ems="10"
+    android:hint="Enter NFC Tag ID"
+    android:inputType="textPersonName"
+    android:textSize="24dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.603"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.574" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

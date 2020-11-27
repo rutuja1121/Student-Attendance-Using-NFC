@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login_Page"
+android:background="#3B7393">
+
+<ImageView
+    android:id="@+id/Logo"
+    android:layout_width="210dp"
+    android:layout_height="179dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.497"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.065"
+    app:srcCompat="@drawable/vesit_logo" />
+
+<EditText
+    android:id="@+id/EmailTwo"
+    android:layout_width="300dp"
+    android:layout_height="40dp"
+    android:background="#FFFF"
+    android:ems="10"
+    android:hint="Email:"
+    android:inputType="textEmailAddress"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.497"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:textSize="24dp"
+    app:layout_constraintVertical_bias="0.346" />
+
+<EditText
+    android:id="@+id/PasswordTwo"
+    android:layout_width="300dp"
+    android:layout_height="40dp"
+    android:background="#FFFF"
+    android:ems="10"
+    android:hint="Password:"
+    android:inputType="textPassword"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.495"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:textSize="24dp"
+    app:layout_constraintVertical_bias="0.444" />
+
+<Button
+    android:id="@+id/LoginTwo"
+    android:layout_width="176dp"
+    android:layout_height="59dp"
+    android:background="#47C54C"
+    android:text="Login"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.497"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:textSize="32dp"
+    app:layout_constraintVertical_bias="0.562" />
+
+<TextView
+    android:id="@+id/Or"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="OR"
+    android:textColor="#0C0C0C"
+    android:textSize="30dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.498"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.672" />
+
+    <TextView
+        android:id="@+id/SignUpTwo"
+        android:layout_width="307dp"
+        android:layout_height="34dp"
+        android:ems="10"
+        android:textColor="#0C0C0C"
+
+        android:hint="New User? Sign Up"
+
+        android:textAlignment="center"
+        android:textSize="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.75" />
+
+<TextView
+    android:id="@+id/ForgotpasswordTwo"
+    android:layout_width="300dp"
+    android:layout_height="40dp"
+    android:ems="10"
+    android:textColor="#0C0C0C"
+    android:textAlignment="center"
+    android:hint="Forgot Password?"
+
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.497"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+
+    android:textSize="24dp"
+    app:layout_constraintVertical_bias="0.846" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
