@@ -10,7 +10,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class Forgot_Password extends AppCompatActivity {
-    TextView Verify4,ForgotPassword4,VesId4;;
+    TextView Verify4,ForgotPassword4,VesId4;
     EditText Email4;
     Button SubmitButton4;
 

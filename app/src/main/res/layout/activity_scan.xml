@@ -4,6 +4,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Scan">
+    tools:context=".Scan"
+    android:background="#3B7393">
+
+    <FrameLayout
+        android:layout_width="302dp"
+        android:layout_height="572dp"
+        android:background="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_marginBottom="80dp"
+            android:background="#FFFF"
+            android:paddingTop="140dp"
+            android:text="Scan/Tap your NFC Tag"
+            android:textAlignment="center"
+            android:textColor="#0C0C0C"
+            android:textSize="40dp" />
+    </FrameLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

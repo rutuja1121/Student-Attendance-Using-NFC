@@ -83,27 +83,29 @@ android:background="#3B7393">
         android:id="@+id/SignUpTwo"
         android:layout_width="307dp"
         android:layout_height="34dp"
-        android:ems="10"
-        android:textColor="#0C0C0C"
 
-        android:hint="New User? Sign Up"
+        android:text="New User? Sign Up"
 
         android:textAlignment="center"
+
+        android:textColor="#0C0C0C"
         android:textSize="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.75" />
+        app:layout_constraintVertical_bias="0.758"
+       />
 
-<TextView
+
+    <TextView
     android:id="@+id/ForgotpasswordTwo"
     android:layout_width="300dp"
     android:layout_height="40dp"
     android:ems="10"
     android:textColor="#0C0C0C"
     android:textAlignment="center"
-    android:hint="Forgot Password?"
+    android:text="Forgot Password?"
 
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintEnd_toEndOf="parent"

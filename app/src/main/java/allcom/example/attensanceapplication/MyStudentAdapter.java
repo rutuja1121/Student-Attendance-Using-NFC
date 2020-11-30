@@ -10,38 +10,36 @@ import android.widget.TextView;
 import java.util.List;
 import java.util.Map;
 
-public class Myadapter extends BaseExpandableListAdapter {
-
+public class MyStudentAdapter extends BaseExpandableListAdapter {
     Context context;
-    List<String> branches;
-    Map<String,List<String>> claases;
+    List<String> langs;
+    Map<String,List<String>> topics;
 
-    public Myadapter() {
-        this.context = context;
-        this.branches = branches;
-        this.claases = claases;
+    public  MyStudentAdapter(Context context,List<String> langs, Map<String,List<String>> topics){
+        this.langs=langs;
+        this.context=context;
+        this.topics=topics;
+
     }
-
     @Override
     public int getGroupCount() {
 
-        return branches.size();
+        return langs.size();
     }
 
     @Override
     public int getChildrenCount(int i) {
-
-        return claases.get(i).size();
+        return topics.get(langs.get(i)).size();
     }
 
     @Override
     public Object getGroup(int i) {
-        return branches.get(i);
+        return langs.get(i);
     }
 
     @Override
     public Object getChild(int i, int i1) {
-        return claases.get(branches.get(i)).get(i1);
+        return topics.get(langs.get(i)).get(i1);
     }
 
     @Override
@@ -61,29 +59,27 @@ public class Myadapter extends BaseExpandableListAdapter {
 
     @Override
     public View getGroupView(int i, boolean b, View view, ViewGroup viewGroup) {
+        String lang=(String) getGroup(i);
+        if(view==null){
+            LayoutInflater inflator=(LayoutInflater)context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
+            view= inflator.inflate(R.layout.list_parent,null);
 
-        String branches=(String) getGroup(i);
-        if(view == null);
-        {
-            LayoutInflater inflater=(LayoutInflater)context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
-            view=inflater.inflate(R.layout.division,null);
-            TextView txtparent=(TextView) view.findViewById((R.id.tvdivision));
-            txtparent.setText(branches);
         }
+        TextView txt=(TextView) view.findViewById(R.id.parent);
+        txt.setText(lang);
         return view;
     }
 
     @Override
     public View getChildView(int i, int i1, boolean b, View view, ViewGroup viewGroup) {
-        String classes=(String) getChild(i,i1);
-        if(view == null);
-        {
-            LayoutInflater inflater=(LayoutInflater)context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
-            view=inflater.inflate(R.layout.division,null);
-            TextView txt=(TextView) view.findViewById((R.id.classtv));
-            txt.setText(classes);
-        }
+        String topic=(String) getGroup(i);
+        if(view==null){
+            LayoutInflater inflator1=(LayoutInflater)context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
+            view= inflator1.inflate(R.layout.list_child,null);
 
+        }
+        TextView txt1=(TextView) view.findViewById(R.id.child);
+        txt1.setText(topic);
         return view;
     }
 

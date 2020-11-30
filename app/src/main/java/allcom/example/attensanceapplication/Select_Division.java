@@ -8,56 +8,79 @@ import android.widget.ExpandableListAdapter;
 import android.widget.ExpandableListView;
 import android.widget.Toast;
 
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import javax.net.ssl.CertPathTrustManagerParameters;
-
 
 public class Select_Division extends AppCompatActivity {
-
 ExpandableListView expand;
-List<String> branches;
-Map<String,List<String>>classes;
-ExpandableListAdapter listadapter;
+List<String> langs;
+Map<String, List<String>> topics;
+ExpandableListAdapter listAdapter;
+
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select__division);
-        expand=findViewById(R.id.expand);
-        fillData();
-        listadapter=new Myadapter();
-        expand.setAdapter(listadapter);
-        expand.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
-            @Override
-            public boolean onChildClick(ExpandableListView expandableListView, View view, int i, int i1, long l) {
+      expand=findViewById(R.id.expand);
+      fillData();
+      listAdapter=new MyExListAdapter(this,langs,topics);
+      expand.setAdapter(listAdapter);
+      expand.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
+          @Override
+          public boolean onChildClick(ExpandableListView expandableListView, View view, int i, int i1, long l) {
+              return false;
+          }
+      });
 
-                return false;
+
+
             }
-        });
+   public void fillData(){
+        langs = new ArrayList<>();
+        topics=new HashMap<>();
+
+         langs.add(" CMPN");
+         langs.add(" EXTC");
+       langs.add(" IT");
+       langs.add(" ETRX");
 
 
-    }
-    public void fillData()
-    {
-        branches=new ArrayList<>();
-        classes=new HashMap<>();
+         List<String> cmpn=new ArrayList<>();
+       List<String> extc=new ArrayList<>();
+       List<String> it=new ArrayList<>();
+       List<String> etrx=new ArrayList<>();
 
-        branches.add("CMPN");
-        branches.add("EXTC");
+       cmpn.add("D7A");
+       cmpn.add("D7B");
+       cmpn.add("D7C");
 
-        List<String> cmpn=new ArrayList<>();
-        List<String> entc=new ArrayList<>();
-        cmpn.add("D7A");
-      cmpn.add("D7B");
 
-      entc.add("D9A");
-        entc.add("D9B");
-        classes.put(branches.get(0),cmpn);
-        classes.put(branches.get(1),entc);
+       extc.add("D9A");
+       extc.add("D9B");
+       extc.add("D9C");
 
-    }
+       it.add("D10B");
+       it.add("D10B");
+       it.add("D10B");
+
+       etrx.add("D11B");
+       etrx.add("D11B");
+       etrx.add("D11B");
+
+
+       topics.put(langs.get(0),cmpn);
+       topics.put(langs.get(1),extc);
+       topics.put(langs.get(2),it);
+       topics.put(langs.get(3),etrx);
+
+
+
+   }
+
 }
