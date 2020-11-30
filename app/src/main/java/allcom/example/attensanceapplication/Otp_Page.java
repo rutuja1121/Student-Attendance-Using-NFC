@@ -25,7 +25,7 @@ public class Otp_Page extends AppCompatActivity {
         SubmitButton6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent =new Intent(Otp_Page.this,Select_year_teacher.class);
+                Intent intent =new Intent(Otp_Page.this,Login_Page.class);
                 startActivity(intent);
             }
         });

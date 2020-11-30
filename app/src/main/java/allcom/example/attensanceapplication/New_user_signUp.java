@@ -53,13 +53,7 @@ public class New_user_signUp extends AppCompatActivity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_item);
         Academicyear.setAdapter(adapter);
 
-        SubmitButton3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent =new Intent(New_user_signUp.this,Forgot_Password.class);
-                startActivity(intent);
-            }
-        });
+
 
 
     }
