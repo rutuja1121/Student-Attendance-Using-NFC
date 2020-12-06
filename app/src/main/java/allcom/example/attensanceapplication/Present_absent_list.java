@@ -11,7 +11,7 @@ import android.widget.TextView;
 public class Present_absent_list extends AppCompatActivity {
 EditText textView12,editTextTextPersonName2,editTextTextPersonName4,editTextTextPersonName6,editTextTextPersonName11,editTextTextPersonName12,editTextTextPersonName3,textView17,textView16,editTextTextPersonName,editTextTextPersonName14,editTextTextPersonName15;
 TextView editTextTextPersonName9,editTextTextPersonName7,editTextTextPersonName8,editTextTextPersonName10;
-
+    @SuppressWarnings("unchecked")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

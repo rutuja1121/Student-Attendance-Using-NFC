@@ -17,6 +17,8 @@ public class Subject_selet_student extends AppCompatActivity {
     List<String> langs1;
     Map<String, List<String>> topics1;
     ExpandableListAdapter llistAdapter;
+    @SuppressWarnings("unchecked")
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

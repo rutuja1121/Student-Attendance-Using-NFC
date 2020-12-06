@@ -1,9 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".View_edit_Details">
+    tools:context=".View_edit_Details"
+    android:background="#3B7393">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+<TableRow
+    android:layout_width="match_parent"
+    android:layout_height="50dp">
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="20sp"
+        android:layout_height="match_parent"
+        android:text="Branch"
+        android:textAlignment="center"
+        android:textColor="#0C0C0C"
+        android:textSize="30sp" />
+</TableRow>
+</TableLayout>

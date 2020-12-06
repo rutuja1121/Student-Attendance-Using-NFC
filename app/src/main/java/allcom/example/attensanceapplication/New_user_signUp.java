@@ -47,13 +47,20 @@ public class New_user_signUp extends AppCompatActivity {
         StudentButton3=findViewById(R.id.StudentButton3);
         SubmitButton3=findViewById(R.id.SubmitButton3);
 
+
         Academicyear=findViewById(R.id.Academicyear);
         String[] teacher=getResources().getStringArray(R.array.academcicYear);
         ArrayAdapter adapter=new ArrayAdapter(this,android.R.layout.simple_spinner_item, teacher);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_item);
         Academicyear.setAdapter(adapter);
 
-
+        SubmitButton3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(New_user_signUp.this,GetOtp.class);
+                startActivity(intent);
+            }
+        });
 
 
     }

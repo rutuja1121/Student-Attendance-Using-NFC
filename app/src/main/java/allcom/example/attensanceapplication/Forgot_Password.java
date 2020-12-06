@@ -14,7 +14,7 @@ public class Forgot_Password extends AppCompatActivity {
     EditText Email4;
     Button SubmitButton4;
 
-
+    @SuppressWarnings("unchecked")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

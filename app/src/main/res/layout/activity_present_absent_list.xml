@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".Present_absent_list"
 
-        android:background="#3B7393">
+    android:background="#3B7393">
 
 
     <EditText

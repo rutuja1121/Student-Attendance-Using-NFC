@@ -16,7 +16,7 @@ public class Login_Page extends AppCompatActivity {
     TextView Or, SignUpTwo, ForgotpasswordTwo;
     EditText EmailTwo, PasswordTwo;
     ImageView Logo;
-
+    @SuppressWarnings("unchecked")
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
