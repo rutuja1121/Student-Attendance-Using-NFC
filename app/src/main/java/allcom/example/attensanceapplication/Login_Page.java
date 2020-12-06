@@ -10,11 +10,14 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class Login_Page extends AppCompatActivity {
     Button LoginTwo;
     TextView Or, SignUpTwo, ForgotpasswordTwo;
     EditText EmailTwo, PasswordTwo;
     ImageView Logo;
+    private FirebaseAuth mAuth;
     @SuppressWarnings("unchecked")
 
     @Override
@@ -31,6 +34,8 @@ public class Login_Page extends AppCompatActivity {
         PasswordTwo = findViewById(R.id.PasswordTwo);
         Logo = findViewById(R.id.Logo);
 
+        mAuth = FirebaseAuth.getInstance();
+
         LoginTwo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -38,7 +43,16 @@ public class Login_Page extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        
 
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        // Check if user is signed in (non-null) and update UI accordingly.
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        updateUI(currentUser);
     }
 }
 
