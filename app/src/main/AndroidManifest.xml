@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".report"></activity>
+        <activity android:name=".GetOtp"></activity>
+        <activity android:name=".report" />
         <activity android:name=".View_attendanec_report" />
         <activity android:name=".Update_Page" />
         <activity android:name=".View_edit_Details" />
@@ -27,7 +28,10 @@
         <activity android:name=".Select_Division" />
         <activity android:name=".Select_new_branch" />
         <activity android:name=".Select_year_teacher" />
-        <activity android:name=".Otp_Page" />
+        <activity
+            android:name=".Otp_Page"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
         <activity android:name=".Create_new_Password" />
         <activity android:name=".Forgot_Password" />
         <activity android:name=".New_user_signUp" />

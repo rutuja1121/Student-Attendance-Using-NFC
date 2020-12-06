@@ -4,6 +4,42 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Marked">
+    tools:context=".Marked"
+    android:background="#3B7393">
+
+    <FrameLayout
+        android:layout_width="336dp"
+        android:layout_height="587dp"
+        android:background="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="335dp"
+            android:layout_height="220dp"
+            android:paddingTop="50dp"
+            android:text="Your attendance for this session is marked."
+            android:textAlignment="center"
+            android:textColor="#0C0C0C"
+            android:textSize="40dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.276" />
+
+        <ImageView
+            android:id="@+id/correct"
+            android:layout_width="210dp"
+            android:layout_height="179dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/correct_sign" />
+
+
+    </FrameLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

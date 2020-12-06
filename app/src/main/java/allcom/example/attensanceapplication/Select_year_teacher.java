@@ -15,6 +15,7 @@ TextView Teachers7,SelectTeachers7;
 RadioGroup radioGroup2 ;
 RadioButton FeButton7,SeButton7,TeButton7,BeButton7;
 Button SubmitButton7;
+    @SuppressWarnings("unchecked")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -15,6 +15,7 @@ import android.widget.TextView;
 
 
 public class New_user_signUp extends AppCompatActivity {
+
     TextView CreateNew,Category3;
     RadioGroup radiogroup;
     EditText Name3,Email3,PhoneNumber3,Password3,ReEnterPassword3,AcademicYear3,NfcTag3;
@@ -22,9 +23,9 @@ public class New_user_signUp extends AppCompatActivity {
     Spinner Academicyear;
     Button SubmitButton3;
 
-
-
     @SuppressWarnings("unchecked")
+
+
 
 
     @Override
@@ -46,6 +47,7 @@ public class New_user_signUp extends AppCompatActivity {
         StudentButton3=findViewById(R.id.StudentButton3);
         SubmitButton3=findViewById(R.id.SubmitButton3);
 
+
         Academicyear=findViewById(R.id.Academicyear);
         String[] teacher=getResources().getStringArray(R.array.academcicYear);
         ArrayAdapter adapter=new ArrayAdapter(this,android.R.layout.simple_spinner_item, teacher);
@@ -55,7 +57,7 @@ public class New_user_signUp extends AppCompatActivity {
         SubmitButton3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent =new Intent(New_user_signUp.this,Forgot_Password.class);
+                Intent intent=new Intent(New_user_signUp.this,GetOtp.class);
                 startActivity(intent);
             }
         });

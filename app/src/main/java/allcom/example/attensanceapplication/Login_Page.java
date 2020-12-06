@@ -10,7 +10,10 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+<<<<<<< HEAD
 import com.google.firebase.auth.FirebaseAuth;
+=======
+>>>>>>> 358f94876ff05d15e6722c0c9d80fc32be38f5c1
 
 public class Login_Page extends AppCompatActivity {
     Button LoginTwo;
@@ -33,20 +36,38 @@ public class Login_Page extends AppCompatActivity {
         EmailTwo = findViewById(R.id.EmailTwo);
         PasswordTwo = findViewById(R.id.PasswordTwo);
         Logo = findViewById(R.id.Logo);
+<<<<<<< HEAD
 
         mAuth = FirebaseAuth.getInstance();
 
+=======
+>>>>>>> 358f94876ff05d15e6722c0c9d80fc32be38f5c1
         LoginTwo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent =new Intent(Login_Page.this,New_user_signUp.class);
-                startActivity(intent);
+               Intent intent=new Intent(Login_Page.this,Select_year_teacher.class);
+               startActivity(intent);
             }
         });
         
 
+        SignUpTwo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(Login_Page.this,New_user_signUp.class);
+                startActivity(intent);
+            }
+        });
+       ForgotpasswordTwo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(Login_Page.this,Forgot_Password.class);
+                startActivity(intent);
+            }
+        });
     }
 
+<<<<<<< HEAD
     @Override
     public void onStart() {
         super.onStart();
@@ -54,5 +75,8 @@ public class Login_Page extends AppCompatActivity {
         FirebaseUser currentUser = mAuth.getCurrentUser();
         updateUI(currentUser);
     }
+=======
+
+>>>>>>> 358f94876ff05d15e6722c0c9d80fc32be38f5c1
 }
 

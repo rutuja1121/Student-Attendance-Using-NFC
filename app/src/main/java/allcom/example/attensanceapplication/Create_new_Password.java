@@ -13,7 +13,7 @@ public class Create_new_Password extends AppCompatActivity {
     EditText NewPassword5,ReEnterPassword5;
     Button SubmitButton5;
     TextView CreatePassword5;
-
+    @SuppressWarnings("unchecked")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

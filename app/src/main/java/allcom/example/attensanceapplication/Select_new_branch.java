@@ -15,7 +15,7 @@ RadioGroup radioGroup;
 RadioButton radioButton5,radioButton4,radioButton3,radioButton,radioButton2,radioButton6;
 TextView textView2;
 Button button3;
-
+    @SuppressWarnings("unchecked")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

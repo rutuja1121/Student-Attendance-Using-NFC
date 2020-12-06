@@ -4,6 +4,132 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".View_attendanec_report">
+    tools:context=".View_attendanec_report"
+    android:background="#3B7393">
+    <Spinner
+        android:id="@+id/vieweditdetailsspinner"
+        android:layout_width="175dp"
+        android:layout_height="67dp"
+        android:background="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.932"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.731" />
+
+    <Button
+        android:id="@+id/viewattendancedetailssubmitbutton"
+        android:layout_width="176dp"
+        android:layout_height="59dp"
+        android:background="#47C54C"
+        android:outlineAmbientShadowColor="@color/colorPrimary"
+        android:shadowColor="#4CAF50"
+        android:text="Submit"
+        android:textColor="#0C0C0C"
+        android:textSize="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.446"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.93" />
+
+    <Spinner
+        android:id="@+id/vieweditdetailsspinner2"
+        android:layout_width="173dp"
+        android:layout_height="67dp"
+        android:background="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.936"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.467" />
+
+    <TextView
+        android:id="@+id/vieweditdetailstodatetv3"
+        android:layout_width="195dp"
+        android:layout_height="49dp"
+        android:text="To Date"
+        android:textAlignment="center"
+
+
+        android:textColor="#0C0C0C"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.712" />
+
+    <EditText
+        android:id="@+id/viewattendancedetailstodateet"
+        android:layout_width="214dp"
+        android:layout_height="50dp"
+        android:background="#FFFFFF"
+        android:ems="10"
+
+        android:inputType="textPersonName"
+        android:text="Class Name"
+        android:textColor="#0C0C0C"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.233" />
+
+    <TextView
+        android:id="@+id/viewattendancedetailsfromdatev2"
+        android:layout_width="195dp"
+        android:layout_height="49dp"
+        android:text="From Date"
+        android:textAlignment="center"
+
+
+        android:textColor="#0C0C0C"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.463" />
+
+    <TextView
+        android:id="@+id/updateclasstv3"
+        android:layout_width="329dp"
+        android:layout_height="56dp"
+        android:background="#FFFFFF"
+        android:text="View Attendance Details"
+        android:textAlignment="center"
+        android:textColor="#0C0C0C"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.044" />
+
+    <TextView
+        android:id="@+id/viewattendancedetailsclassetv"
+        android:layout_width="195dp"
+        android:layout_height="49dp"
+        android:text="Class"
+        android:textAlignment="center"
+
+
+        android:textColor="#0C0C0C"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.004"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.233" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
