@@ -10,10 +10,10 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-<<<<<<< HEAD
+
 import com.google.firebase.auth.FirebaseAuth;
-=======
->>>>>>> 358f94876ff05d15e6722c0c9d80fc32be38f5c1
+import com.google.firebase.auth.FirebaseUser;
+
 
 public class Login_Page extends AppCompatActivity {
     Button LoginTwo;
@@ -36,12 +36,11 @@ public class Login_Page extends AppCompatActivity {
         EmailTwo = findViewById(R.id.EmailTwo);
         PasswordTwo = findViewById(R.id.PasswordTwo);
         Logo = findViewById(R.id.Logo);
-<<<<<<< HEAD
+
 
         mAuth = FirebaseAuth.getInstance();
 
-=======
->>>>>>> 358f94876ff05d15e6722c0c9d80fc32be38f5c1
+
         LoginTwo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -67,16 +66,14 @@ public class Login_Page extends AppCompatActivity {
         });
     }
 
-<<<<<<< HEAD
+
     @Override
     public void onStart() {
         super.onStart();
-        // Check if user is signed in (non-null) and update UI accordingly.
+
         FirebaseUser currentUser = mAuth.getCurrentUser();
         updateUI(currentUser);
     }
-=======
 
->>>>>>> 358f94876ff05d15e6722c0c9d80fc32be38f5c1
 }
 

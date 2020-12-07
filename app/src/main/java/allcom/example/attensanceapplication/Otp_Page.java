@@ -56,13 +56,13 @@ public class Otp_Page extends AppCompatActivity {
         SubmitButton6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(EnterOtp6.getText().toString().isEmpty()){
+                if(Otp6.getText().toString().isEmpty()){
                     Toast.makeText(getApplicationContext(), "blank", Toast.LENGTH_SHORT).show();
-                }else if (EnterOtp6.getText().toString().length()!=6){
+                }else if (Otp6.getText().toString().length()!=6){
                     Toast.makeText(getApplicationContext(), "invalid otp", Toast.LENGTH_SHORT).show();
                 }else
                 {
-                    PhoneAuthCredential credential=PhoneAuthProvider.getCredential(otpid,EnterOtp6.getText().toString());
+                    PhoneAuthCredential credential=PhoneAuthProvider.getCredential(otpid,Otp6.getText().toString());
                     signInWithPhoneAuthCredential(credential);
                 }
 

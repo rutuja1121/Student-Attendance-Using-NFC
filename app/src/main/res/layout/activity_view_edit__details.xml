@@ -7,17 +7,206 @@
     tools:context=".View_edit_Details"
     android:background="#3B7393">
 
-<TableRow
-    android:layout_width="match_parent"
-    android:layout_height="50dp">
+<TableRow>
 
     <TextView
-        android:id="@+id/textView8"
-        android:layout_width="20sp"
+        android:id="@+id/names"
+        android:layout_width="231dp"
         android:layout_height="match_parent"
+        android:background="#3B7393"
         android:text="Branch"
+        android:textSize="30dp"
+
         android:textAlignment="center"
         android:textColor="#0C0C0C"
-        android:textSize="30sp" />
+      />
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="181dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:background="#3B7393"
+        android:text="Select Year"
+        android:textAlignment="center"
+        android:textColor="#0C0C0C"
+        android:textSize="30dp" />
+
 </TableRow>
+    <TableRow>
+
+        <TextView
+            android:id="@+id/cmpn"
+            android:layout_width="231dp"
+            android:layout_height="match_parent"
+            android:background="#3B7393"
+            android:text="CMPN"
+
+android:gravity="center"
+
+            android:textColor="#0C0C0C"
+            android:textSize="30dp" />
+        <RadioGroup>
+
+            <RadioButton
+                android:layout_gravity="center"
+                android:textSize="30dp"
+                android:layout_width="51dp"
+                android:layout_height="40dp"
+                android:text="1" />
+            <RadioButton
+                android:layout_gravity="center"
+                android:textSize="30dp"
+                android:layout_width="51dp"
+                android:layout_height="40dp"
+                android:text="2" />
+            <RadioButton
+                android:layout_gravity="center"
+                android:textSize="30dp"
+                android:layout_width="51dp"
+                android:layout_height="40dp"
+                android:text="3" />
+            <RadioButton
+                android:layout_gravity="center"
+                android:textSize="30dp"
+                android:layout_width="51dp"
+                android:layout_height="40dp"
+                android:text="4" />
+
+        </RadioGroup>
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+            android:id="@+id/extc"
+            android:layout_width="231dp"
+            android:layout_height="match_parent"
+            android:background="#3B7393"
+            android:text="EXTC"
+
+            android:textAlignment="center"
+
+            android:textColor="#0C0C0C"
+            android:textSize="30dp" />
+        <RadioGroup>
+
+            <RadioButton
+                android:layout_gravity="center"
+                android:textSize="30dp"
+                android:layout_width="51dp"
+                android:layout_height="40dp"
+                android:text="1" />
+            <RadioButton
+                android:layout_gravity="center"
+                android:textSize="30dp"
+                android:layout_width="51dp"
+                android:layout_height="40dp"
+                android:text="2" />
+            <RadioButton
+                android:layout_gravity="center"
+                android:textSize="30dp"
+                android:layout_width="51dp"
+                android:layout_height="40dp"
+                android:text="3" />
+            <RadioButton
+                android:layout_gravity="center"
+                android:textSize="30dp"
+                android:layout_width="51dp"
+                android:layout_height="40dp"
+                android:text="4" />
+
+
+        </RadioGroup>
+
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+            android:id="@+id/it"
+            android:layout_width="231dp"
+            android:layout_height="match_parent"
+            android:background="#3B7393"
+            android:text="IT"
+
+
+            android:textAlignment="center"
+            android:textColor="#0C0C0C"
+            android:textSize="30dp" />
+        <RadioGroup>
+
+            <RadioButton
+                android:layout_gravity="center"
+                android:textSize="30dp"
+                android:layout_width="51dp"
+                android:layout_height="40dp"
+                android:text="1" />
+            <RadioButton
+                android:layout_gravity="center"
+                android:textSize="30dp"
+                android:layout_width="51dp"
+                android:layout_height="40dp"
+                android:text="2" />
+            <RadioButton
+                android:layout_gravity="center"
+                android:textSize="30dp"
+                android:layout_width="51dp"
+                android:layout_height="40dp"
+                android:text="3" />
+            <RadioButton
+                android:layout_gravity="center"
+                android:textSize="30dp"
+                android:layout_width="51dp"
+                android:layout_height="40dp"
+                android:text="4" />
+
+
+        </RadioGroup>
+    </TableRow>
+    <TableRow>
+
+
+        <TextView
+            android:id="@+id/etrx"
+            android:layout_width="231dp"
+            android:layout_height="match_parent"
+            android:background="#3B7393"
+            android:text="ETRX"
+
+            android:textAlignment="center"
+            android:textColor="#0C0C0C"
+            android:textSize="30dp" />
+
+        <RadioGroup>
+
+            <RadioButton
+                android:layout_gravity="center"
+                android:textSize="30dp"
+                android:layout_width="51dp"
+                android:layout_height="40dp"
+                android:text="1" />
+            <RadioButton
+                android:layout_gravity="center"
+                android:textSize="30dp"
+                android:layout_width="51dp"
+                android:layout_height="40dp"
+                android:text="2" />
+            <RadioButton
+                android:layout_gravity="center"
+                android:textSize="30dp"
+                android:layout_width="51dp"
+                android:layout_height="40dp"
+                android:text="3" />
+            <RadioButton
+                android:layout_gravity="center"
+                android:textSize="30dp"
+                android:layout_width="51dp"
+                android:layout_height="40dp"
+                android:text="4" />
+
+        </RadioGroup>
+
+    </TableRow>
+
+
 </TableLayout>
