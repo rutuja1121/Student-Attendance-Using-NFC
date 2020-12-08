@@ -24,13 +24,13 @@
 
     <TextView
         android:id="@+id/updatePAGEtv3"
-        android:layout_width="272dp"
-        android:layout_height="52dp"
-        android:background="#FFFFFF"
+        android:layout_width="298dp"
+        android:layout_height="77dp"
+
         android:text="Add Class"
         android:textAlignment="center"
-        android:textColor="#0C0C0C"
-        android:textSize="30dp"
+        android:textColor="#FFFF"
+        android:textSize="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
@@ -93,7 +93,7 @@
         android:inputType="textPersonName"
         android:text="Name"
         android:textAlignment="center"
-        android:textColor="#0C0C0C"
+
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -131,5 +131,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.645" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -14,7 +14,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Student email"
-        android:textColor="#0C0C0C"
+
 
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -32,7 +32,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Phn no"
-        android:textColor="#0C0C0C"
+
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -49,7 +49,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Student name"
-        android:textColor="#0C0C0C"
+
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -83,7 +83,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Parent Email"
-        android:textColor="#0C0C0C"
+
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -211,7 +211,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Parent phone no"
-        android:textColor="#0C0C0C"
+
         android:textSize="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -228,7 +228,7 @@
 
         android:layout_marginStart="200dp"
         android:background="#FFFFFF"
-        android:textColor="#0C0C0C"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -253,19 +253,19 @@
 
     <TextView
         android:id="@+id/studentdetailstv"
-        android:layout_width="268dp"
-        android:layout_height="57dp"
-        android:background="#FFFF"
+        android:layout_width="386dp"
+        android:layout_height="67dp"
+
         android:text="Student Details"
         android:textAlignment="center"
-        android:textColor="#0C0C0C"
-        android:textSize="30dp"
+        android:textColor="#FFFF"
+        android:textSize="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.48"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023" />
+        app:layout_constraintVertical_bias="0.007" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

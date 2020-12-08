@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Front_page">
+    tools:context=".Front_page"
+    android:background="@drawable/front_page1"
+    >
 
 </androidx.constraintlayout.widget.ConstraintLayout>

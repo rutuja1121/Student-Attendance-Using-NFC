@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 
 
@@ -20,7 +21,9 @@ public class Login_Page extends AppCompatActivity {
     TextView Or, SignUpTwo, ForgotpasswordTwo;
     EditText EmailTwo, PasswordTwo;
     ImageView Logo;
+    RadioGroup radio;
     private FirebaseAuth mAuth;
+
     @SuppressWarnings("unchecked")
 
     @Override
@@ -44,20 +47,22 @@ public class Login_Page extends AppCompatActivity {
         LoginTwo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               Intent intent=new Intent(Login_Page.this,Select_year_teacher.class);
-               startActivity(intent);
+                Intent intent=new Intent(Login_Page.this,Select_year_teacher.class);
+                startActivity(intent);
             }
         });
-        
+
 
         SignUpTwo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(Login_Page.this,New_user_signUp.class);
                 startActivity(intent);
+
+
             }
         });
-       ForgotpasswordTwo.setOnClickListener(new View.OnClickListener() {
+        ForgotpasswordTwo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(Login_Page.this,Forgot_Password.class);
@@ -67,13 +72,6 @@ public class Login_Page extends AppCompatActivity {
     }
 
 
-    @Override
-    public void onStart() {
-        super.onStart();
-
-        FirebaseUser currentUser = mAuth.getCurrentUser();
-        updateUI(currentUser);
-    }
 
 }
 

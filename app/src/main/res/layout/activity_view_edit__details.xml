@@ -15,21 +15,22 @@
         android:layout_height="match_parent"
         android:background="#3B7393"
         android:text="Branch"
-        android:textSize="30dp"
+        android:textSize="40dp"
 
         android:textAlignment="center"
         android:textColor="#0C0C0C"
       />
+
     <TextView
         android:id="@+id/textView9"
-        android:layout_width="181dp"
-        android:layout_height="match_parent"
+        android:layout_width="162dp"
+        android:layout_height="115dp"
         android:layout_gravity="center_horizontal"
         android:background="#3B7393"
         android:text="Select Year"
         android:textAlignment="center"
         android:textColor="#0C0C0C"
-        android:textSize="30dp" />
+        android:textSize="40dp" />
 
 </TableRow>
     <TableRow>
