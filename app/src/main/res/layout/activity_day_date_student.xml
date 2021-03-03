@@ -7,91 +7,73 @@
     tools:context=".Day_date_student"
     android:background="#3B7393">
 
-        <Spinner
-            android:id="@+id/year"
-            android:layout_width="96dp"
-            android:layout_height="96dp"
-            android:background="#FFFF"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.901"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.261">
-
-        </Spinner>
-
-        <Spinner
-            android:id="@+id/month"
-            android:layout_width="96dp"
-            android:layout_height="96dp"
-            android:background="#FFFF"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.261">
-
-        </Spinner>
-
-        <Spinner
-            android:id="@+id/date"
-            android:layout_width="96dp"
-            android:layout_height="96dp"
-            android:background="#FFFF"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.082"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.262">
-
-        </Spinner>
-
-        <Spinner
-            android:id="@+id/day"
-            android:layout_width="96dp"
-            android:layout_height="96dp"
-            android:background="#FFFF"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.082"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.064">
-
-        </Spinner>
-
-
-
-
-
         <TextView
-            android:id="@+id/editTextTime"
-            android:layout_width="216dp"
-            android:layout_height="49dp"
-            android:ems="10"
-            android:inputType="time"
+            android:id="@+id/choose_date"
+            android:layout_width="324dp"
+            android:layout_height="81dp"
+            android:background="@drawable/round"
+            android:text="Choose Date"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="45dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.079"
+            app:layout_constraintHorizontal_bias="0.493"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.75" />
+            app:layout_constraintVertical_bias="0.042" />
 
-        <TextView
-            android:id="@+id/editTextTime2"
-            android:layout_width="215dp"
-            android:layout_height="47dp"
-            android:ems="10"
-            android:inputType="time"
+        <CalendarView
+            android:id="@+id/calender"
+            android:layout_width="385dp"
+            android:layout_height="333dp"
+            android:background="@drawable/round"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.081"
+            app:layout_constraintHorizontal_bias="0.384"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.868" />
+            app:layout_constraintVertical_bias="0.349" />
+
+        <Button
+            android:id="@+id/submit_data"
+            android:layout_width="299dp"
+            android:layout_height="89dp"
+            android:background="@drawable/round_for_submit"
+            android:text="Submit"
+            android:textSize="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.945" />
+
+        <Button
+            android:id="@+id/timebtn"
+            android:layout_width="114dp"
+            android:layout_height="57dp"
+            android:background="@drawable/round"
+            android:text="SELECT Time"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.948"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.733" />
+
+        <EditText
+            android:id="@+id/time"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.313"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.737" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

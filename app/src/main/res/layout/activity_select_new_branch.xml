@@ -120,7 +120,7 @@
             android:layout_width="142dp"
             android:layout_height="52dp"
             android:layout_marginTop="76dp"
-            android:background="#4CAF50"
+            android:background="@drawable/round_for_submit"
             android:text="submit"
             android:textColor="#0C0C0C"
 

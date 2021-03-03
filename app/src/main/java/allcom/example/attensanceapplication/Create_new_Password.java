@@ -25,7 +25,7 @@ public class Create_new_Password extends AppCompatActivity {
         SubmitButton5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent =new Intent(Create_new_Password.this,Otp_Page.class);
+                Intent intent =new Intent(Create_new_Password.this,Login_Page.class);
                 startActivity(intent);
             }
         });

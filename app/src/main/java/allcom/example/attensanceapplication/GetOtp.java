@@ -15,10 +15,10 @@ import com.hbb20.CountryCodePicker;
 
 
 public class GetOtp extends AppCompatActivity {
-TextView verify,verifyOtp6,number91;
-EditText nuber;
-CountryCodePicker ccp;
-Button SubmitButton6;
+    TextView verify,verifyOtp6,number91;
+    EditText nuber;
+    CountryCodePicker ccp;
+    Button SubmitButton6;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -17,8 +17,8 @@ import java.util.Map;
 
 public class Select_Division extends AppCompatActivity {
 ExpandableListView expand;
-List<String> langs;
-Map<String, List<String>> topics;
+List<String> branches;
+Map<String, List<String>> divisions;
 ExpandableListAdapter listAdapter;
 
     @SuppressWarnings("unchecked")
@@ -29,8 +29,9 @@ ExpandableListAdapter listAdapter;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select__division);
       expand=findViewById(R.id.expand);
+
       fillData();
-      listAdapter=new MyExListAdapter(this,langs,topics);
+      listAdapter=new MyExListAdapter(this,branches,divisions);
       expand.setAdapter(listAdapter);
 
 
@@ -56,38 +57,38 @@ ExpandableListAdapter listAdapter;
 
             }
    public void fillData(){
-        langs = new ArrayList<>();
-        topics=new HashMap<>();
+       branches = new ArrayList<String>();
+        divisions=new HashMap<String ,List<String>>();
 
-         langs.add(" CMPN");
-         langs.add(" EXTC");
-       langs.add(" IT");
-       langs.add(" ETRX");
+        branches.add(" CMPN");
+        branches.add(" EXTC");
+        branches.add(" IT");
+        branches.add(" ETRX");
 
 
-         List<String> cmpn=new ArrayList<>();
+         List<String> divisions0=new ArrayList<>();
        {
-           cmpn.add("D7A");
-           cmpn.add("D7B");
-           cmpn.add("D7C");
+           divisions0.add("D7A");
+           divisions0.add("D7B");
+           divisions0.add("D7C");
        }
-       List<String> extc=new ArrayList<>();
+       List<String> divisions1=new ArrayList<>();
        {
-           extc.add("D9A");
-           extc.add("D9B");
-           extc.add("D9C");
+           divisions1.add("D9A");
+           divisions1.add("D9B");
+           divisions1.add("D9C");
        }
-       List<String> it=new ArrayList<>();
+       List<String> divisions2=new ArrayList<>();
        {
-           it.add("D10B");
-           it.add("D10B");
-           it.add("D10B");
+           divisions2.add("D10B");
+           divisions2.add("D10B");
+           divisions2.add("D10B");
        }
-       List<String> etrx=new ArrayList<>();
+       List<String>  divisions3=new ArrayList<>();
        {
-           etrx.add("D11B");
-           etrx.add("D11B");
-           etrx.add("D11B");
+           divisions3.add("D11B");
+           divisions3.add("D11B");
+           divisions3.add("D11B");
        }
 
 
@@ -95,11 +96,10 @@ ExpandableListAdapter listAdapter;
 
 
 
-       topics.put(langs.get(0),cmpn);
-       topics.put(langs.get(1),extc);
-       topics.put(langs.get(2),it);
-       topics.put(langs.get(3),etrx);
-
+       divisions.put(branches.get(0),divisions0);
+       divisions.put(branches.get(1),divisions1);
+       divisions.put(branches.get(2),divisions2);
+       divisions.put(branches.get(3),divisions3);
 
 
    }

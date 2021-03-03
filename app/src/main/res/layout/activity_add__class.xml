@@ -26,10 +26,10 @@
         android:id="@+id/updatePAGEtv3"
         android:layout_width="298dp"
         android:layout_height="77dp"
-
+android:background="@drawable/round"
         android:text="Add Class"
         android:textAlignment="center"
-        android:textColor="#FFFF"
+        android:textColor="#000000"
         android:textSize="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -72,7 +72,7 @@
         android:id="@+id/submitbutton"
         android:layout_width="176dp"
         android:layout_height="59dp"
-        android:background="#47C54C"
+        android:background="@drawable/round_for_submit"
 
         android:text="Submit"
         android:textSize="24dp"

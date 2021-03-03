@@ -8,9 +8,9 @@
     android:background="#3B7393">
 
     <FrameLayout
-        android:layout_width="302dp"
-        android:layout_height="572dp"
-        android:background="@android:color/white"
+        android:layout_width="310dp"
+        android:layout_height="587dp"
+        android:background="@drawable/round"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -19,9 +19,9 @@
         <TextView
             android:id="@+id/textView2"
             android:layout_width="match_parent"
-            android:layout_height="400dp"
+            android:layout_height="582dp"
             android:layout_marginBottom="80dp"
-            android:background="#FFFF"
+            android:background="@drawable/round"
             android:paddingTop="140dp"
             android:text="Scan/Tap your NFC Tag"
             android:textAlignment="center"

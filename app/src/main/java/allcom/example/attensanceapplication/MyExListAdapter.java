@@ -11,80 +11,85 @@ import java.util.List;
 import java.util.Map;
 
 public class MyExListAdapter extends BaseExpandableListAdapter {
-   Context context;
-   List<String> langs;
-   Map<String,List<String>> topics;
+   private Context context;
+   private List<String> branches;
+   private Map<String,List<String>> divisions;
 
-   public  MyExListAdapter(Context context,List<String> langs, Map<String,List<String>> topics){
-       this.langs=langs;
+   public  MyExListAdapter(Context context,List<String> branches, Map<String,List<String>> divisions){
+       this.branches=branches;
        this.context=context;
-       this.topics=topics;
+       this.divisions=divisions;
 
    }
     @Override
     public int getGroupCount() {
 
-        return langs.size();
+        return this.branches.size();
     }
 
     @Override
     public int getChildrenCount(int i) {
-        return topics.get(langs.get(i)).size();
+        return this.divisions.get(branches.get(i)).size();
     }
 
     @Override
     public Object getGroup(int i) {
-        return langs.get(i);
+        return this.branches.get(i);
     }
 
     @Override
     public Object getChild(int i, int i1) {
-        return topics.get(langs.get(i)).get(i1);
+        return this.divisions.get(branches.get(i)).get(i1);
     }
 
     @Override
-    public long getGroupId(int i) {
+    public long getGroupId(int i)
+    {
         return i;
     }
 
+
     @Override
-    public long getChildId(int i, int i1) {
+    public long getChildId(int i, int i1)
+    {
         return i1;
     }
 
     @Override
-    public boolean hasStableIds() {
+    public boolean hasStableIds()
+    {
         return false;
     }
 
     @Override
     public View getGroupView(int i, boolean b, View view, ViewGroup viewGroup) {
-       String lang=(String) getGroup(i);
+       String branches=(String) getGroup(i);
        if(view==null){
            LayoutInflater inflator=(LayoutInflater)context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
            view= inflator.inflate(R.layout.list_parent,null);
 
        }
         TextView txt=(TextView) view.findViewById(R.id.parent);
-       txt.setText(lang);
+       txt.setText(branches);
         return view;
     }
 
     @Override
     public View getChildView(int i, int i1, boolean b, View view, ViewGroup viewGroup) {
-        String topic=(String) getGroup(i);
+        String divisions=(String) getGroup(i);
         if(view==null){
             LayoutInflater inflator1=(LayoutInflater)context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
             view= inflator1.inflate(R.layout.list_child,null);
 
         }
         TextView txt1=(TextView) view.findViewById(R.id.child);
-        txt1.setText(topic);
+        txt1.setText(divisions);
         return view;
     }
 
     @Override
-    public boolean isChildSelectable(int i, int i1) {
+    public boolean isChildSelectable(int i, int i1)
+    {
         return true;
     }
 }
