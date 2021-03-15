@@ -7,7 +7,7 @@
     <corners android:radius="30dp" />
 
     <!-- This is the border color -->
-    <stroke android:width="5dp" android:color="#ccc" />
+    <stroke android:width="3dp" android:color="#ccc" />
 
 
 

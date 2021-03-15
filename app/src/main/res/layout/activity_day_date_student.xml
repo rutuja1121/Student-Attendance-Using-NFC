@@ -37,8 +37,8 @@
 
         <Button
             android:id="@+id/submit_data"
-            android:layout_width="299dp"
-            android:layout_height="89dp"
+            android:layout_width="276dp"
+            android:layout_height="87dp"
             android:background="@drawable/round_for_submit"
             android:text="Submit"
             android:textSize="50dp"

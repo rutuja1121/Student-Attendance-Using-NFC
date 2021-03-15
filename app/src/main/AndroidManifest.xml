@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="allcom.example.attensanceapplication">
 
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,8 +11,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-
         <activity android:name=".GetOtp" />
         <activity android:name=".report" />
         <activity android:name=".View_attendanec_report" />
@@ -37,17 +37,15 @@
         <activity android:name=".Create_new_Password" />
         <activity android:name=".Forgot_Password" />
         <activity android:name=".New_user_signUp" />
-        <activity android:name=".Login_Page"
-            android:theme="@style/AppTheme">
-
-        </activity>
+        <activity
+            android:name=".Login_Page"
+            android:theme="@style/AppTheme"></activity>
         <activity android:name=".Front_page">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
     </application>
 

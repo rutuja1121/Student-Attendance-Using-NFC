@@ -23,16 +23,16 @@ public class Subject_selet_student extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_subject_selet_student);
-        expand1=findViewById(R.id.expand);
-        fillData();
-        llistAdapter=new MyExListAdapter(this,langs1,topics1);
-        expand1.setAdapter(llistAdapter);
-        expand1.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
-            @Override
-            public boolean onChildClick(ExpandableListView expandableListView, View view, int i, int i1, long l) {
-                return false;
-            }
-        });
+//        expand1=findViewById(R.id.expand);
+//        fillData();
+//        llistAdapter=new MyExListAdapter(this,langs1,topics1);
+//        expand1.setAdapter(llistAdapter);
+//        expand1.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
+//            @Override
+//            public boolean onChildClick(ExpandableListView expandableListView, View view, int i, int i1, long l) {
+//                return false;
+//            }
+//        });
     }
     public void fillData(){
         langs1 = new ArrayList<>();

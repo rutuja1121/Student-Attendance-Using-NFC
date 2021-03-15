@@ -95,64 +95,71 @@ public class New_user_signUp extends AppCompatActivity {
                 Name3.setError("Enter Name");
                 return;
             }
-            if (TextUtils.isEmpty(email)){
+                else  if (TextUtils.isEmpty(email)){
                 Email3.setError("Enter Email");
                 return;
             }
-            if ( phoneNo.length() < 10 ){
+            else if ( phoneNo.length() < 10 ){
                 PhoneNumber3.setError("Enter Valid Phone Number");
                 return;
             }
-            if ( phoneNo.length() > 10 ){
+            else if ( phoneNo.length() > 10 ){
                 PhoneNumber3.setError("Enter Valid Phone Number");
                 return;
             }
-            if (TextUtils.isEmpty(password)){
+            else if (TextUtils.isEmpty(password)){
                 Password3.setError("Enter Password");
                 return;
             }
-            if (password.length() < 6){
+            else if (password.length() < 6){
                 Password3.setError("Password must be greater or Equal to 6 characters");
                 return;
             }
-            if (!password.equals(repassword)){
+            else if (!password.equals(repassword)){
                 ReEnterPassword3.setError("Entered Password Does not Match");
                 return;
 
             }
 
+            else{
 
+                mAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(task -> {
+                    if (task.isSuccessful()){
+                        Toast.makeText(New_user_signUp.this, "User created.", Toast.LENGTH_LONG).show();
+                        userID = mAuth.getCurrentUser().getUid();
+                        DocumentReference documentReference = db.collection("users").document(userID);
+                        Map<String,Object> user = new HashMap<>();
+                        user.put("Name3",name);
+                        user.put("Email3",email);
+                        user.put("PhoneNumber3",phoneNo);
 
+                        if(TeacherButton3.isChecked()){
 
-            mAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(task -> {
-                if (task.isSuccessful()){
-                    Toast.makeText(New_user_signUp.this, "User created.", Toast.LENGTH_LONG).show();
-                    userID = mAuth.getCurrentUser().getUid();
-                    DocumentReference documentReference = db.collection("users").document(userID);
-                    Map<String,Object> user = new HashMap<>();
-                    user.put("Name3",name);
-                    user.put("Email3",email);
-                    user.put("PhoneNumber3",phoneNo);
+                            user.put("userType","teacher");
+                        }
 
-                    if(TeacherButton3.isChecked()){
+                        if(StudentButton3.isChecked()){
 
-                        user.put("isteacher","1");
+                            user.put("userType","student");
+                        }
+                        if(AdminButton3.isChecked()){
+
+                            user.put("userType","admin");
+                        }
+                        documentReference.set(user).addOnSuccessListener(aVoid -> Log.d(TAG1,"onSuccess: user profile is created for"  + userID));
+                        Intent intent =new Intent(New_user_signUp.this,Login_Page.class);
+                        startActivity(intent);
+                        mAuth.signOut();
+                    } else {
+                        Toast.makeText(New_user_signUp.this, "ERROR!!! " +task.getException(), Toast.LENGTH_LONG).show();
                     }
-                    if(StudentButton3.isChecked()){
+                });
+            }
 
-                        user.put("isStudent","2");
-                    }
-                    if(AdminButton3.isChecked()){
 
-                        user.put("isAdmin","3");
-                    }
-                    documentReference.set(user).addOnSuccessListener(aVoid -> Log.d(TAG1,"onSuccess: user profile is created for"  + userID));
-                    Intent intent =new Intent(New_user_signUp.this,GetOtp.class);
-                    startActivity(intent);
-                } else {
-                    Toast.makeText(New_user_signUp.this, "ERROR!!!", Toast.LENGTH_LONG).show();
-                }
-            });
+
+
+
 
 
         });

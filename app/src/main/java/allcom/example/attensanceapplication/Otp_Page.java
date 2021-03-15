@@ -118,7 +118,7 @@ public class Otp_Page extends AppCompatActivity {
                                 if (task.isSuccessful())
                                 {
 
-                                    startActivity(new Intent(Otp_Page.this,Login_Page.class));
+                                    startActivity(new Intent(Otp_Page.this,New_user_signUp.class));
                                     finish();
 
                                 } else {
