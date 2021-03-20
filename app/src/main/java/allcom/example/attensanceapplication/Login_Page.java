@@ -75,7 +75,7 @@ public class Login_Page extends AppCompatActivity {
             else{
                 mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(task -> {
                     if (task.isSuccessful()) {
-                        Toast.makeText(Login_Page.this, "Logged in succesfully", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Login_Page.this, "Logged in successfully", Toast.LENGTH_SHORT).show();
                         DocumentReference df = FirebaseFirestore.getInstance().collection("users").document(FirebaseAuth.getInstance().getCurrentUser().getUid());
                         df.get().addOnSuccessListener(documentSnapshot -> {
                             if(documentSnapshot.getString("userType").equals("teacher")){
@@ -88,7 +88,7 @@ public class Login_Page extends AppCompatActivity {
                             }
 
                             else if(documentSnapshot.getString("userType").equals("admin")){
-                                startActivity(new Intent(Login_Page.this,Admin.class));
+                                startActivity(new Intent(Login_Page.this,Teacher_Details.class));
                                 finish();
                             }
                             else{
