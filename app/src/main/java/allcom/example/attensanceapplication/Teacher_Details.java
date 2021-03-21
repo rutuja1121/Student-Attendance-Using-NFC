@@ -41,7 +41,7 @@ public class Teacher_Details extends AppCompatActivity {
                 AdapterView sclass = null;
 
                 if(!name.getText().toString().isEmpty()&&!phoneno.getText().toString().isEmpty()&&!email.getText().toString().isEmpty()&&!qualification.getText().toString().isEmpty()){
-                    Toast.makeText(Teacher_Details.this, ""+classname, Toast.LENGTH_SHORT).show();
+
                     Map<String,Object> data=new HashMap<String, Object>();
                     data.put("Name",name.getText().toString());
                     data.put("Qualification",qualification.getText().toString());
@@ -51,7 +51,12 @@ public class Teacher_Details extends AppCompatActivity {
                     allteachers.add(data).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                         @Override
                         public void onSuccess(DocumentReference documentReference) {
-                            Toast.makeText(Teacher_Details.this, "Teacher Added", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Teacher_Details.this, "success", Toast.LENGTH_SHORT).show();
+                            name.setText("");
+                            phoneno.setText("");
+                            qualification.setText("");
+                            email.setText("");
+                            System.out.println("success1");
                         }
                     }).addOnFailureListener(new OnFailureListener() {
                         @Override
@@ -61,7 +66,7 @@ public class Teacher_Details extends AppCompatActivity {
                     });
                 }
                 else{
-                    Toast.makeText(Teacher_Details.this, "null value", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Teacher_Details.this, "null values", Toast.LENGTH_SHORT).show();
                 }
             }
         });

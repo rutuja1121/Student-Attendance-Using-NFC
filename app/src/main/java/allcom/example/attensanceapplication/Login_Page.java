@@ -88,7 +88,7 @@ public class Login_Page extends AppCompatActivity {
                             }
 
                             else if(documentSnapshot.getString("userType").equals("admin")){
-                                startActivity(new Intent(Login_Page.this,Teacher_Details.class));
+                                startActivity(new Intent(Login_Page.this,Admin.class));
                                 finish();
                             }
                             else{

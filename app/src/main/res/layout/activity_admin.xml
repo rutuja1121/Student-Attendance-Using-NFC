@@ -4,28 +4,84 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#3B7393"
     tools:context=".Admin">
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="176dp"
+        android:layout_height="59dp"
+        android:background="#47C54C"
+        android:text="submit"
+        android:textSize="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.791" />
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="admin page"
+        android:layout_width="307dp"
+        android:layout_height="42dp"
+        android:background="#FFFFFF"
+        android:text="ADMIN"
+        android:textColor="#000000"
+        android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.728" />
+        app:layout_constraintVertical_bias="0.036" />
 
-    <Button
-        android:id="@+id/admin_logout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="logout"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <RadioGroup
+        android:id="@+id/maingrp"
+        android:layout_width="311dp"
+        android:layout_height="342dp"
+        android:padding="20dp"
+        android:layout_marginTop="30dp"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView4">
+
+
+        <RadioButton
+            android:id="@+id/Add_Teacher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Teacher"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="20dp"
+            android:textSize="30sp" />
+
+        <RadioButton
+            android:id="@+id/Add_Class"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add class"
+            android:layout_marginBottom="20dp"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp" />
+
+        <RadioButton
+            android:id="@+id/Add_Student"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Student"
+            android:layout_marginBottom="20dp"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp" />
+
+        <RadioButton
+            android:id="@+id/Edit_Details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View/Edit Details"
+            android:layout_marginBottom="20dp"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp" />
+    </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

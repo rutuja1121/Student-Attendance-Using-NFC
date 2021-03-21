@@ -74,7 +74,7 @@
         android:id="@+id/udatesubmitbutton"
         android:layout_width="176dp"
         android:layout_height="59dp"
-        android:background="@drawable/round_for_submit"
+        android:background="#47C54C"
         android:outlineAmbientShadowColor="@color/colorPrimary"
         android:shadowColor="#4CAF50"
         android:text="Submit"
@@ -91,11 +91,12 @@
         android:id="@+id/updatestudentemailet2"
         android:layout_width="214dp"
         android:layout_height="50dp"
-        android:background="@drawable/round"
+
+        android:background="#FFFFFF"
         android:ems="10"
         android:hint="Enter Email"
 
-        android:inputType="textPersonName"
+        android:inputType="textEmailAddress"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -108,12 +109,12 @@
         android:id="@+id/updatephonenoet4"
         android:layout_width="214dp"
         android:layout_height="50dp"
-        android:background="@drawable/round"
+        android:background="#FFFFFF"
         android:ems="10"
         android:hint="Phone No"
 
 
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -126,7 +127,7 @@
         android:id="@+id/udateparentemailet3"
         android:layout_width="214dp"
         android:layout_height="50dp"
-        android:background="@drawable/round"
+        android:background="#FFFFFF"
         android:ems="10"
         android:hint="Enter Qualification"
         android:inputType="textPersonName"
@@ -160,7 +161,7 @@
         android:layout_width="212dp"
         android:layout_height="51dp"
         android:layout_marginTop="128dp"
-        android:background="@drawable/round"
+        android:background="#FFFFFF"
         android:ems="10"
         android:hint="Name"
         android:inputType="textPersonName"
@@ -172,4 +173,3 @@
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-

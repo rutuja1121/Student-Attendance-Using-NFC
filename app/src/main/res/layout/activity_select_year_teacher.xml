@@ -78,7 +78,7 @@
             android:id="@+id/TeButton7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Third Year"
+            android:text="Second Year"
             android:textSize="30dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
