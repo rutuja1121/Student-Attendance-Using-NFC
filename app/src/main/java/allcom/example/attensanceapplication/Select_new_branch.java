@@ -9,12 +9,15 @@ import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Select_new_branch extends AppCompatActivity {
-RadioGroup radioGroup;
-RadioButton radioButton5,radioButton4,radioButton3,radioButton,radioButton2,radioButton6;
-TextView textView2;
-Button button3;
+    RadioGroup radioGroup;
+    RadioButton radioButton5,radioButton4,radioButton3,radioButton,radioButton2,radioButton6;
+    TextView textView2;
+    Button button3;
+    RadioButton FindButton;
+    int radioid;
     @SuppressWarnings("unchecked")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,10 +32,19 @@ Button button3;
         textView2=findViewById(R.id.textView2);
         radioButton5=findViewById(R.id.radioButton5);
        button3=findViewById(R.id.button3);
+        String TeacherName=getIntent().getStringExtra("Teacher name");
+        String TeacherYear=getIntent().getStringExtra("Teacher Year");
+        Toast.makeText(this, ""+TeacherName+TeacherYear, Toast.LENGTH_SHORT).show();
         button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                radioid=radioGroup.getCheckedRadioButtonId();
+                FindButton=findViewById(radioid);
+                String selectDiv=FindButton.getText().toString();
                 Intent intent =new Intent(Select_new_branch.this,Select_Division.class);
+                intent.putExtra("Teacher name",TeacherName);
+                intent.putExtra("Teacher Year",TeacherYear);
+                intent.putExtra("Teacher Division",selectDiv);
                 startActivity(intent);
             }
         });

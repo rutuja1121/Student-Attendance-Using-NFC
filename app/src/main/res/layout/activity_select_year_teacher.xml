@@ -16,28 +16,30 @@
         android:textAlignment="center"
         android:textColor="#0C0C0C"
         android:textSize="40sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.441"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.09" />
+        app:layout_constraintVertical_bias="0.085" />
 
     <TextView
         android:id="@+id/SelectTeachers7"
-        android:layout_width="308dp"
+        android:layout_width="wrap_content"
         android:layout_height="59dp"
-        android:text="Select Teachers"
+        android:text="Select Year"
         android:textColor="#0C0C0C"
         android:textSize="40sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/radiogroup"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.265" />
-
+        app:layout_constraintVertical_bias="0.826" />
 
     <RadioGroup
+        android:id="@+id/radiogroup"
         android:layout_width="222dp"
         android:layout_height="221dp"
         android:textAlignment="center"
@@ -45,16 +47,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.535"
-       >
+        app:layout_constraintTop_toTopOf="parent">
 
         <RadioButton
             android:id="@+id/FeButton7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
             android:text="First Year"
+            android:textColor="#ffffff"
             android:textSize="30dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.446"
@@ -66,6 +66,7 @@
             android:layout_width="204dp"
             android:layout_height="34dp"
             android:text="Second Year"
+            android:textColor="#ffffff"
             android:textSize="30dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -78,7 +79,8 @@
             android:id="@+id/TeButton7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Second Year"
+            android:text="Third Year"
+            android:textColor="#ffffff"
             android:textSize="30dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -92,6 +94,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Fourth Year"
+            android:textColor="#ffffff"
             android:textSize="30dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -114,8 +117,22 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.799" />
+        app:layout_constraintTop_toBottomOf="@+id/radiogroup"
+        app:layout_constraintVertical_bias="0.212" />
+
+    <Button
+        android:id="@+id/logout"
+        android:layout_width="156dp"
+        android:layout_height="49dp"
+        android:background="#47C54C"
+        android:text="Log-out"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SubmitButton7"
+        app:layout_constraintVertical_bias="0.307" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

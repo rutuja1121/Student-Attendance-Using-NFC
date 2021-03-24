@@ -15,12 +15,14 @@ public class Admin extends AppCompatActivity {
     RadioButton FindButton;
     Button Submit;
     int radioid;
+    Button logout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin);
         maingrp=findViewById(R.id.maingrp);
         Submit=findViewById(R.id.submit);
+        logout=findViewById(R.id.logout);
         Submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -43,6 +45,15 @@ public class Admin extends AppCompatActivity {
                     Intent intent=new Intent(Admin.this,Update_Page.class);//Select_year_teacher
                     startActivity(intent);
                 }
+            }
+        });
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i=new Intent(Admin.this,Login_Page.class);
+                i.putExtra("val",1);
+                startActivity(i);
+                finish();
             }
         });
     }

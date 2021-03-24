@@ -19,7 +19,22 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.86" />
+        app:layout_constraintVertical_bias="0.813" />
+
+
+    <Button
+        android:id="@+id/log"
+        android:layout_width="176dp"
+        android:layout_height="59dp"
+        android:background="@drawable/round_for_submit"
+        android:text="Log-out"
+        android:textSize="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.949" />
 
     <TextView
             android:id="@+id/textView3"
@@ -37,6 +52,7 @@
             app:layout_constraintVertical_bias="0.066" />
 
     <RadioGroup
+        android:id="@+id/radioGroup2"
         android:layout_width="141dp"
         android:layout_height="393dp"
         android:textAlignment="center"

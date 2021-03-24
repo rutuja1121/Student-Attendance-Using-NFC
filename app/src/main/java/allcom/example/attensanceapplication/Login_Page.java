@@ -36,8 +36,8 @@ public class Login_Page extends AppCompatActivity {
     EditText EmailTwo, PasswordTwo;
     ImageView Logo;
     RadioGroup radio;
-    private FirebaseAuth mAuth;
-
+    FirebaseAuth mAuth;
+    int i1;
     @SuppressWarnings("unchecked")
 
     @Override
@@ -56,8 +56,13 @@ public class Login_Page extends AppCompatActivity {
         radio = findViewById(R.id.radio);
 
         mAuth = FirebaseAuth.getInstance();
-
-
+        i1=getIntent().getIntExtra("val",2);
+        System.out.println("eses "+i1);
+        if(i1==1){
+            Toast.makeText(this, "hello", Toast.LENGTH_SHORT).show();
+            mAuth.signOut();
+        }
+        System.out.println("myhello "+mAuth);
         LoginTwo.setOnClickListener(view -> {
             String email = EmailTwo.getText().toString().trim();
             String password = PasswordTwo.getText().toString().trim();
@@ -79,16 +84,22 @@ public class Login_Page extends AppCompatActivity {
                         DocumentReference df = FirebaseFirestore.getInstance().collection("users").document(FirebaseAuth.getInstance().getCurrentUser().getUid());
                         df.get().addOnSuccessListener(documentSnapshot -> {
                             if(documentSnapshot.getString("userType").equals("teacher")){
-                                startActivity(new Intent(Login_Page.this,Select_year_teacher.class));
+                                Intent intent=new Intent(Login_Page.this,Select_year_teacher.class);
+                                intent.putExtra("Teacher name",documentSnapshot.get("Name3").toString());
+                                startActivity(intent);
+                                i1=2;
                                 finish();
+
                             }
                             else if(documentSnapshot.getString("userType").equals("student")){
                                 startActivity(new Intent(Login_Page.this,Subject_selet_student.class));
+                                i1=2;
                                 finish();
                             }
 
                             else if(documentSnapshot.getString("userType").equals("admin")){
                                 startActivity(new Intent(Login_Page.this,Admin.class));
+                                i1=2;
                                 finish();
                             }
                             else{
@@ -110,7 +121,7 @@ public class Login_Page extends AppCompatActivity {
         });
 
         SignUpTwo.setOnClickListener(view -> {
-            Intent intent = new Intent(Login_Page.this, GetOtp.class);
+            Intent intent = new Intent(Login_Page.this, New_user_signUp.class);
             startActivity(intent);
 
 
@@ -143,37 +154,5 @@ public class Login_Page extends AppCompatActivity {
             passwordResetDialog.create().show();
         });
 
-    }
-
-
-
-    @Override
-    protected void onStart(){
-        super.onStart();
-        if(FirebaseAuth.getInstance().getCurrentUser() != null){
-            DocumentReference df = FirebaseFirestore.getInstance().collection("users").document(FirebaseAuth.getInstance().getCurrentUser().getUid());
-            df.get().addOnSuccessListener(documentSnapshot -> {
-                if(documentSnapshot.getString("userType").equals("teacher")){
-                    startActivity(new Intent(Login_Page.this,Select_year_teacher.class));
-                    finish();
-                }
-                else if(documentSnapshot.getString("userType").equals("student")){
-                    startActivity(new Intent(Login_Page.this,Subject_selet_student.class));
-                    finish();
-                }
-
-                else if(documentSnapshot.getString("userType").equals("admin")){
-                    startActivity(new Intent(Login_Page.this,Admin.class));
-                    finish();
-                }
-                else{
-                    Toast.makeText(Login_Page.this, " Error! ", Toast.LENGTH_SHORT);
-                }
-
-
-            });
-
-
-        }
     }
 }
