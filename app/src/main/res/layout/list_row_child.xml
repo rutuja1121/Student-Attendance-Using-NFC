@@ -8,7 +8,7 @@
         android:id="@+id/textViewChild"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="#FFD662"
+        android:textColor="#000000"
         android:textStyle="bold"
         android:paddingLeft="?android:attr/expandableListPreferredChildPaddingLeft"
         android:textSize="23dp" />

@@ -8,7 +8,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.Toast;
 
 public class Admin extends AppCompatActivity {
     RadioGroup maingrp;
@@ -22,7 +21,7 @@ public class Admin extends AppCompatActivity {
         setContentView(R.layout.activity_admin);
         maingrp=findViewById(R.id.maingrp);
         Submit=findViewById(R.id.submit);
-        logout=findViewById(R.id.logout);
+        logout=findViewById(R.id.View);
         Submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

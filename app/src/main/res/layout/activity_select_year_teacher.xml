@@ -107,10 +107,10 @@
     </RadioGroup>
 
     <Button
-        android:id="@+id/SubmitButton7"
+        android:id="@+id/attendance"
         android:layout_width="156dp"
         android:layout_height="49dp"
-        android:background="#47C54C"
+        android:background="@drawable/round_for_submit"
         android:text="SUBMIT"
         android:textSize="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -119,20 +119,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radiogroup"
         app:layout_constraintVertical_bias="0.212" />
-
-    <Button
-        android:id="@+id/logout"
-        android:layout_width="156dp"
-        android:layout_height="49dp"
-        android:background="#47C54C"
-        android:text="Log-out"
-        android:textSize="25dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/SubmitButton7"
-        app:layout_constraintVertical_bias="0.307" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

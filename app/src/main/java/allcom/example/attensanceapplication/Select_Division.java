@@ -34,11 +34,11 @@ public class Select_Division extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select__division);
-        String TeacherName=getIntent().getStringExtra("Teacher name");
-        TeacherYear=getIntent().getStringExtra("Teacher Year");
-        TeacherDiv=getIntent().getStringExtra("Teacher Division");
+        String TeacherName = getIntent().getStringExtra("Teacher name");
+        TeacherYear = getIntent().getStringExtra("Teacher Year");
+        System.out.println("helloo " + TeacherYear);
 
-        Toast.makeText(this, ""+TeacherName+TeacherYear+TeacherDiv, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "" + TeacherName + TeacherYear, Toast.LENGTH_SHORT).show();
         // get the listview
         expListView = (ExpandableListView) findViewById(R.id.lvExp);
 
@@ -90,61 +90,28 @@ public class Select_Division extends Activity {
                 listDataHeader.get(groupPosition) + " Collapsed",
                 Toast.LENGTH_SHORT).show());
 
-
-
-        expListView.setOnChildClickListener((parent, v, groupPosition, childPosition, id) -> {
-
-                if (groupPosition == 0) {
-                    if (childPosition == 0) {
-                        Intent child0Intent = new Intent(getBaseContext(), Present_absent_list.class);
-                        Toast.makeText(this, ""+listDataChild.get(childPosition), Toast.LENGTH_SHORT).show();
-                        startActivity(child0Intent);
-                    }
-                    if (childPosition == 1) {
-                        Intent child0Intent = new Intent(getBaseContext(), Present_absent_list.class);
-                        startActivity(child0Intent);
-                    }
-                    if (childPosition == 2) {
-                        Intent child0Intent = new Intent(getBaseContext(), Present_absent_list.class);
-                        startActivity(child0Intent);
-                    }
-                    if (childPosition == 3) {
-                        Intent child0Intent = new Intent(getBaseContext(), Present_absent_list.class);
-                        startActivity(child0Intent);
-                    }
-                }
-            if (groupPosition == 1) {
-                if (childPosition == 0) {
-                    Intent child0Intent = new Intent(getBaseContext(), Present_absent_list.class);
-                    startActivity(child0Intent);
-                }
-                if (childPosition == 1) {
-                    Intent child0Intent = new Intent(getBaseContext(), Present_absent_list.class);
-                    startActivity(child0Intent);
-                }
-                if (childPosition == 2) {
-                    Intent child0Intent = new Intent(getBaseContext(), Present_absent_list.class);
-                    startActivity(child0Intent);
-                }
+        expListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
+            @Override
+            public boolean onChildClick(ExpandableListView expandableListView, View view, int groupPosition, int childPosition, long l) {
+                Toast.makeText(
+                        getApplicationContext(),
+                        listDataHeader.get(groupPosition)
+                                + " : "
+                                + listDataChild.get(
+                                listDataHeader.get(groupPosition)).get(
+                                childPosition), Toast.LENGTH_SHORT)
+                        .show();
+                        Intent i =new Intent(getApplicationContext(),Day_date_student.class);
+                        i.putExtra("Year",TeacherYear);
+                        i.putExtra("Class",listDataHeader.get(groupPosition));
+                        i.putExtra("Division",listDataChild.get(
+                                listDataHeader.get(groupPosition)).get(
+                                childPosition));
+                        startActivity(i);
+                return false;
             }
-            if (groupPosition == 2) {
-                if (childPosition == 0) {
-                    Intent child0Intent = new Intent(getBaseContext(), Present_absent_list.class);
-                    startActivity(child0Intent);
-                }
-                if (childPosition == 2) {
-                    Intent child0Intent = new Intent(getBaseContext(), Present_absent_list.class);
-                    startActivity(child0Intent);
-                }
-                if (childPosition == 3) {
-                    Intent child0Intent = new Intent(getBaseContext(), Present_absent_list.class);
-                    startActivity(child0Intent);
-                }
-            }
-            return false;
         });
     }
-
 
     /*
      * Preparing the list data
@@ -154,13 +121,13 @@ public class Select_Division extends Activity {
         listDataChild = new HashMap<String, List<String>>();
 
         // Adding child data
-        if (TeacherDiv.equals("Cmpn_1")) {
+
             listDataHeader.add("CMPN1");
-        } else if(TeacherDiv.equals("Cmpn_2")) {
-            listDataHeader.add("cmpn2");
-        }else if(TeacherDiv.equals("IT")){
+
+            listDataHeader.add("CMPN2");
+
             listDataHeader.add("IT");
-        }
+
 
         
         // Adding child data
@@ -177,7 +144,7 @@ public class Select_Division extends Activity {
             top250.add("D12A");
             top250.add("D12B");
             top250.add("D12C");
-        }else if(TeacherYear.equals("Forth Year")){
+        }else if(TeacherYear.equals("Fourth Year")){
             top250.add("D17A");
             top250.add("D17B");
             top250.add("D17C");
@@ -198,7 +165,7 @@ public class Select_Division extends Activity {
             nowShowing.add("D12B");
             nowShowing.add("D12C");
         }
-        else if(TeacherYear.equals("Forth Year")){
+        else if(TeacherYear.equals("Fourth Year")){
             nowShowing.add("D16A");
             nowShowing.add("D16B");
             nowShowing.add("D16C");
@@ -219,19 +186,17 @@ public class Select_Division extends Activity {
             comingSoon.add("D20B");
             comingSoon.add("D20C");
         }
-        else if(TeacherYear.equals("Forth Year")){
+        else if(TeacherYear.equals("Fourth Year")){
             comingSoon.add("D25A");
             comingSoon.add("D25B");
             comingSoon.add("D25C");
         }
-        if (TeacherDiv.equals("Cmpn_1")) {
+
             listDataChild.put(listDataHeader.get(0), top250); // Header, Child data
-        } else if(TeacherDiv.equals("Cmpn_2")) {
-            listDataChild.put(listDataHeader.get(0), nowShowing);
-        }else if(TeacherDiv.equals("IT")) {
-        listDataChild.put(listDataHeader.get(0), comingSoon);
+            listDataChild.put(listDataHeader.get(1), nowShowing);
+            listDataChild.put(listDataHeader.get(2), comingSoon);
     }
-    }
+
 }
 class MyExplistAdapter extends BaseExpandableListAdapter {
 
@@ -310,24 +275,8 @@ class MyExplistAdapter extends BaseExpandableListAdapter {
 
         return convertView;
     }
-
     @Override
     public boolean isChildSelectable(int i, int i1) {
         return true;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

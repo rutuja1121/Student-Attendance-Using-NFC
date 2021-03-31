@@ -11,6 +11,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
+        <activity android:name=".TeacherMainPage"></activity>
+        <activity android:name=".NewUserAdmin" />
+        <activity android:name=".UsersCategoty" />
+        <activity android:name=".NewUserTeacher" />
         <activity android:name=".GetOtp" />
         <activity android:name=".report" />
         <activity android:name=".View_attendanec_report" />
@@ -39,7 +43,7 @@
         <activity android:name=".New_user_signUp" />
         <activity
             android:name=".Login_Page"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Front_page">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

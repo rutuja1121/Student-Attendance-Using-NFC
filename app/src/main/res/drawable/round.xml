@@ -8,6 +8,7 @@
 
     <!-- This is the border color -->
     <stroke android:width="3dp" android:color="#ccc" />
+    <solid android:color="#FFF"/>
 
 
 

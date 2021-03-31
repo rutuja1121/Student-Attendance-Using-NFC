@@ -28,7 +28,7 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
-
+import com.google.firebase.firestore.auth.User;
 
 public class Login_Page extends AppCompatActivity {
     Button LoginTwo;
@@ -42,10 +42,8 @@ public class Login_Page extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login__page);
-
         LoginTwo = findViewById(R.id.LoginTwo);
         Or = findViewById(R.id.Or);
         SignUpTwo = findViewById(R.id.SignUpTwo);
@@ -54,7 +52,6 @@ public class Login_Page extends AppCompatActivity {
         PasswordTwo = findViewById(R.id.PasswordTwo);
         Logo = findViewById(R.id.Logo);
         radio = findViewById(R.id.radio);
-
         mAuth = FirebaseAuth.getInstance();
         i1=getIntent().getIntExtra("val",2);
         System.out.println("eses "+i1);
@@ -66,17 +63,14 @@ public class Login_Page extends AppCompatActivity {
         LoginTwo.setOnClickListener(view -> {
             String email = EmailTwo.getText().toString().trim();
             String password = PasswordTwo.getText().toString().trim();
-
             if (TextUtils.isEmpty(email)) {
                 EmailTwo.setError("Email is Required.");
                 return;
             }
-
             else if (TextUtils.isEmpty(password)) {
                 PasswordTwo.setError("Password is required");
                 return;
             }
-
             else{
                 mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(task -> {
                     if (task.isSuccessful()) {
@@ -84,12 +78,11 @@ public class Login_Page extends AppCompatActivity {
                         DocumentReference df = FirebaseFirestore.getInstance().collection("users").document(FirebaseAuth.getInstance().getCurrentUser().getUid());
                         df.get().addOnSuccessListener(documentSnapshot -> {
                             if(documentSnapshot.getString("userType").equals("teacher")){
-                                Intent intent=new Intent(Login_Page.this,Select_year_teacher.class);
+                                Intent intent=new Intent(Login_Page.this,TeacherMainPage.class);
                                 intent.putExtra("Teacher name",documentSnapshot.get("Name3").toString());
                                 startActivity(intent);
                                 i1=2;
                                 finish();
-
                             }
                             else if(documentSnapshot.getString("userType").equals("student")){
                                 startActivity(new Intent(Login_Page.this,Subject_selet_student.class));
@@ -105,26 +98,17 @@ public class Login_Page extends AppCompatActivity {
                             else{
                                 Toast.makeText(Login_Page.this, " Error! ", Toast.LENGTH_SHORT);
                             }
-
-
                         });
-
-
                     } else {
                         Toast.makeText(Login_Page.this, " Error! " + task.getException().getMessage(), Toast.LENGTH_SHORT);
                     }
                 });
             }
-
-
-
         });
 
         SignUpTwo.setOnClickListener(view -> {
-            Intent intent = new Intent(Login_Page.this, New_user_signUp.class);
+            Intent intent = new Intent(Login_Page.this, UsersCategoty.class);
             startActivity(intent);
-
-
         });
         ForgotpasswordTwo.setOnClickListener(view -> {
 
@@ -133,7 +117,6 @@ public class Login_Page extends AppCompatActivity {
             passwordResetDialog.setTitle("Reset Password");
             passwordResetDialog.setMessage("Enter your Email to Recieved Reset Link.");
             passwordResetDialog.setView(resetMail);
-
             passwordResetDialog.setPositiveButton("Yes", (dialogInterface, i) -> {
                 //extract the email and send reset link
 
@@ -144,15 +127,11 @@ public class Login_Page extends AppCompatActivity {
                         Toast.makeText(Login_Page.this, "Error ! Reset Link is not Sent" + e.getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 });
-
             });
-
             passwordResetDialog.setNegativeButton("No", (dialogInterface, i) -> {
                 //Close the dialog
             });
-
             passwordResetDialog.create().show();
         });
-
     }
 }

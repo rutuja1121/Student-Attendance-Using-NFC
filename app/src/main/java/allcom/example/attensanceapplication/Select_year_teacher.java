@@ -15,7 +15,7 @@ public class Select_year_teacher extends AppCompatActivity {
     TextView Teachers7,SelectTeachers7;
     RadioGroup radioGroup2 ;
     RadioButton FeButton7,SeButton7,TeButton7,BeButton7;
-    Button SubmitButton7,logout;
+    Button SubmitButton7;
     RadioButton FindButton;
     int radioid;
     @SuppressWarnings("unchecked")
@@ -30,9 +30,9 @@ public class Select_year_teacher extends AppCompatActivity {
         SeButton7 = findViewById(R.id.SeButton7);
         TeButton7 = findViewById(R.id.TeButton7);
         BeButton7= findViewById(R.id.BeButton7);
-        SubmitButton7= findViewById(R.id.SubmitButton7);
+        SubmitButton7= findViewById(R.id.attendance);
         radioGroup2=findViewById(R.id.radiogroup);
-        logout=findViewById(R.id.logout);
+
         String teachename=getIntent().getStringExtra("Teacher name");
         Toast.makeText(this, ""+teachename, Toast.LENGTH_SHORT).show();
         SubmitButton7.setOnClickListener(new View.OnClickListener() {
@@ -41,19 +41,10 @@ public class Select_year_teacher extends AppCompatActivity {
                 radioid=radioGroup2.getCheckedRadioButtonId();
                 FindButton=findViewById(radioid);
                 String Year=FindButton.getText().toString();
-                Intent intent =new Intent(Select_year_teacher.this,Select_new_branch.class);
+                Intent intent =new Intent(Select_year_teacher.this,Select_Division.class);
                 intent.putExtra("Teacher name",teachename);
                 intent.putExtra("Teacher Year",Year);
                 startActivity(intent);
-            }
-        });
-        logout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i=new Intent(Select_year_teacher.this,Login_Page.class);
-                i.putExtra("val",1);
-                startActivity(i);
-                finish();
             }
         });
 

@@ -30,7 +30,7 @@ Login_Page l1=new Login_Page();
                       finish();
                   }
                   else if(documentSnapshot.getString("userType").equals("teacher")){
-                      Intent intent=new Intent(Front_page.this,Select_year_teacher.class);
+                      Intent intent=new Intent(Front_page.this,TeacherMainPage.class);
                       intent.putExtra("Teacher name",documentSnapshot.get("Name3").toString());
                       startActivity(intent);
                       finish();
