@@ -115,7 +115,7 @@ android:background="#3B7393">
         app:layout_constraintHorizontal_bias="0.603"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.745" />
+        app:layout_constraintVertical_bias="0.808" />
 
     <EditText
         android:id="@+id/AcademicYear3"
@@ -149,6 +149,22 @@ android:background="#3B7393">
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.657" />
 
+    <EditText
+        android:id="@+id/Division"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:background="@drawable/round"
+        android:ems="10"
+        android:hint="Division"
+        android:inputType="textPersonName"
+        android:textSize="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.603"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.735" />
+
     <Button
         android:id="@+id/SubmitButton3"
         android:layout_width="179dp"
@@ -162,7 +178,7 @@ android:background="#3B7393">
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.863" />
+        app:layout_constraintVertical_bias="0.941" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

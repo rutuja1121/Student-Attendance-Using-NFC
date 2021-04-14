@@ -16,27 +16,55 @@ import android.widget.ExpandableListView.OnGroupExpandListener;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
+import com.google.android.gms.tasks.Tasks;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.Query;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
+
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+
+import static android.os.Build.ID;
 
 public class Select_Division extends Activity {
 
     ExpandableListAdapter listAdapter;
     ExpandableListView expListView;
     List<String> listDataHeader;
+    List<String> top250 = new ArrayList<String>();
+    List<String> nowShowing = new ArrayList<String>();
+    List<String> comingSoon = new ArrayList<String>();
+    List<String> classes=new ArrayList<>();
     HashMap<String, List<String>> listDataChild;
     Button logout1;
+    Docs docs;
+    int count=1;
+    String id,cla,div;
     String TeacherDiv;
     MyExplistAdapter myExplistAdapter;
     String TeacherYear;
+    String TeacherName;
+    FirebaseFirestore db=FirebaseFirestore.getInstance();
+    CollectionReference ref=db.collection("Class");
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select__division);
-        String TeacherName = getIntent().getStringExtra("Teacher name");
+        TeacherName = getIntent().getStringExtra("Teacher name");
         TeacherYear = getIntent().getStringExtra("Teacher Year");
-        System.out.println("helloo " + TeacherYear);
 
         Toast.makeText(this, "" + TeacherName + TeacherYear, Toast.LENGTH_SHORT).show();
         // get the listview
@@ -44,10 +72,7 @@ public class Select_Division extends Activity {
 
         // preparing list data
         prepareListData();
-        myExplistAdapter = new MyExplistAdapter(this, listDataHeader, listDataChild);
 
-        // setting list adapter
-        expListView.setAdapter(myExplistAdapter);
 
         // Listview Group click listener
 
@@ -80,30 +105,21 @@ public class Select_Division extends Activity {
 
         expListView.setOnGroupClickListener((parent, v, groupPosition, id) -> false);
 
-        // Listview Group expanded listener
-        expListView.setOnGroupExpandListener(groupPosition -> Toast.makeText(getApplicationContext(),
-                listDataHeader.get(groupPosition) + " Expanded",
-                Toast.LENGTH_SHORT).show());
-
-        // Listview Group collasped listener
-        expListView.setOnGroupCollapseListener(groupPosition -> Toast.makeText(getApplicationContext(),
-                listDataHeader.get(groupPosition) + " Collapsed",
-                Toast.LENGTH_SHORT).show());
-
         expListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
             @Override
             public boolean onChildClick(ExpandableListView expandableListView, View view, int groupPosition, int childPosition, long l) {
-                Toast.makeText(
-                        getApplicationContext(),
-                        listDataHeader.get(groupPosition)
-                                + " : "
-                                + listDataChild.get(
-                                listDataHeader.get(groupPosition)).get(
-                                childPosition), Toast.LENGTH_SHORT)
-                        .show();
-                        Intent i =new Intent(getApplicationContext(),Day_date_student.class);
+//                Toast.makeText(
+//                        getApplicationContext(),
+//                        listDataHeader.get(groupPosition)
+//                                + " : "
+//                                + listDataChild.get(
+//                                listDataHeader.get(groupPosition)).get(
+//                                childPosition), Toast.LENGTH_SHORT)
+//                        .show();
+                        Intent i =new Intent(getApplicationContext(),TeacherSubject.class);
                         i.putExtra("Year",TeacherYear);
                         i.putExtra("Class",listDataHeader.get(groupPosition));
+                        i.putExtra("Teacher name", TeacherName);
                         i.putExtra("Division",listDataChild.get(
                                 listDataHeader.get(groupPosition)).get(
                                 childPosition));
@@ -117,84 +133,99 @@ public class Select_Division extends Activity {
      * Preparing the list data
      */
     private void prepareListData() {
+        List<List<String>> branch = Collections.singletonList(new ArrayList<String>());
         listDataHeader = new ArrayList<String>();
         listDataChild = new HashMap<String, List<String>>();
-
-        // Adding child data
-
-            listDataHeader.add("CMPN1");
-
-            listDataHeader.add("CMPN2");
-
-            listDataHeader.add("IT");
-
-
-        
-        // Adding child data
-        List<String> top250 = new ArrayList<String>();
+        String year=null;
         if(TeacherYear.equals("First Year")){
-            top250.add("D2A");
-            top250.add("D2B");
-            top250.add("D2C");
-        }else if(TeacherYear.equals("Second Year")){
-            top250.add("D7A");
-            top250.add("D7B");
-            top250.add("D7C");
-        }else if(TeacherYear.equals("Third Year")){
-            top250.add("D12A");
-            top250.add("D12B");
-            top250.add("D12C");
-        }else if(TeacherYear.equals("Fourth Year")){
-            top250.add("D17A");
-            top250.add("D17B");
-            top250.add("D17C");
-        }
-        List<String> nowShowing = new ArrayList<String>();
-        if(TeacherYear.equals("First Year")) {
-            nowShowing.add("D5A");
-            nowShowing.add("D5B");
-            nowShowing.add("D5C");
-        }
-        else if(TeacherYear.equals("Second Year")) {
-            nowShowing.add("D8A");
-            nowShowing.add("D8B");
-            nowShowing.add("D8C");
-        }
-        else if(TeacherYear.equals("Third Year")){
-            nowShowing.add("D12A");
-            nowShowing.add("D12B");
-            nowShowing.add("D12C");
-        }
-        else if(TeacherYear.equals("Fourth Year")){
-            nowShowing.add("D16A");
-            nowShowing.add("D16B");
-            nowShowing.add("D16C");
-        }
-        List<String> comingSoon = new ArrayList<String>();
-        if(TeacherYear.equals("First Year")) {
-            comingSoon.add("D10A");
-            comingSoon.add("D10B");
-            comingSoon.add("D10C");
+            year="1st year";
         }
         else if(TeacherYear.equals("Second Year")){
-            comingSoon.add("D15A");
-            comingSoon.add("D15B");
-            comingSoon.add("D15C");
+            year="2nd year";
         }
         else if(TeacherYear.equals("Third Year")){
-            comingSoon.add("D20A");
-            comingSoon.add("D20B");
-            comingSoon.add("D20C");
+            year="3rd year";
         }
         else if(TeacherYear.equals("Fourth Year")){
-            comingSoon.add("D25A");
-            comingSoon.add("D25B");
-            comingSoon.add("D25C");
+            year="4th year";
         }
+        // Adding child data
+       Task task1=ref.whereEqualTo("year",year)
+                .orderBy("priority", Query.Direction.ASCENDING)
+                .get()
+                .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+                                          @Override
+                                          public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                                              List<DocumentSnapshot> snapshotslist = queryDocumentSnapshots.getDocuments();
+                                              String datadocs = "";
 
-            listDataChild.put(listDataHeader.get(0), top250); // Header, Child data
-            listDataChild.put(listDataHeader.get(1), nowShowing);
-            listDataChild.put(listDataHeader.get(2), comingSoon);
+                                              for (DocumentSnapshot snapshot : snapshotslist) {
+                                                  listDataHeader.add(snapshot.get("branch").toString());
+                                                //  branch.add(snapshot.get("class1").toString());
+
+                                              }
+
+                                          }
+
+                                      });
+
+       Task task2= ref.whereEqualTo("year",year)
+                .whereEqualTo("branch","CMPN").get()
+                .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+                    @Override
+                    public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                        for (QueryDocumentSnapshot documentSnapshot : queryDocumentSnapshots) {
+                            docs = documentSnapshot.toObject(Docs.class);
+                            top250 = docs.getClass1();
+                        }
+                    }
+                });
+        Task task3=ref.whereEqualTo("year",year)
+                .whereEqualTo("branch","IT").get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+                    @Override
+                    public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                        for (QueryDocumentSnapshot documentSnapshot : queryDocumentSnapshots) {
+                            docs = documentSnapshot.toObject(Docs.class);
+                            nowShowing = docs.getClass1();
+                        }
+                    }
+                });
+        Task task4=ref.whereEqualTo("year",year)
+                .whereEqualTo("branch","EXTC").get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+                    @Override
+                    public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                        for (QueryDocumentSnapshot documentSnapshot : queryDocumentSnapshots) {
+                            docs = documentSnapshot.toObject(Docs.class);
+                            comingSoon = docs.getClass1();
+                        }
+                    }
+                });
+        Task task5=ref.whereEqualTo("year",year)
+                .whereEqualTo("branch","ETRX").get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+                    @Override
+                    public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                        for (QueryDocumentSnapshot documentSnapshot : queryDocumentSnapshots) {
+                            docs = documentSnapshot.toObject(Docs.class);
+                            classes = docs.getClass1();
+                        }
+                    }
+                });
+
+
+        Task combine=Tasks.whenAllSuccess(task1,task2,task3,task4,task5).addOnSuccessListener(new OnSuccessListener<List<Object>>() {
+            @Override
+            public void onSuccess(List<Object> list) {
+                listDataChild.put(listDataHeader.get(0), top250);
+                listDataChild.put(listDataHeader.get(1), nowShowing);
+                listDataChild.put(listDataHeader.get(2), comingSoon);
+                listDataChild.put(listDataHeader.get(3), classes);
+                myExplistAdapter = new MyExplistAdapter(Select_Division.this, listDataHeader, listDataChild);
+
+                // setting list adapter
+                expListView.setAdapter(myExplistAdapter);
+
+            }
+        });
     }
 
 }

@@ -9,7 +9,14 @@
         <item>4th year</item>
 
     </string-array>
+    <string-array name="academcicYear1">
+        <item>--select--</item>
+        <item>CMPN</item>
+        <item>IT</item>
+        <item>EXTC</item>
+        <item>ETRX</item>
 
+    </string-array>
     <string-array name="Day">
         <item>--select--</item>
         <item>Monday</item>

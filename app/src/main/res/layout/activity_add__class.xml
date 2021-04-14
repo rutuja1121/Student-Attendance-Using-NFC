@@ -6,21 +6,55 @@
     android:layout_height="match_parent"
     tools:context=".Add_Class"
     android:background="#3B7393">
+
+    <EditText
+        android:id="@+id/Class"
+        android:layout_width="161dp"
+        android:layout_height="45dp"
+        android:background="@drawable/round"
+        android:ems="10"
+        android:hint="Class Name"
+        android:inputType="textEmailAddress"
+        android:textSize="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.916"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/teacheridspinner"
+        app:layout_constraintVertical_bias="0.15" />
+
     <Spinner
-        android:id="@+id/teacheridspinner"
-        android:layout_width="154dp"
+        android:id="@+id/teacheridspinner3"
+        android:layout_width="166dp"
 
-        android:layout_height="55dp"
-        android:background="#FFFFFF"
+        android:layout_height="46dp"
+        android:layout_marginTop="8dp"
 
+        android:background="@drawable/round"
         android:textAlignment="gravity"
         android:textColor="#0C0C0C"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.937"
+        app:layout_constraintHorizontal_bias="0.936"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.644" />
+        app:layout_constraintTop_toBottomOf="@+id/updatePAGEtv3"
+        app:layout_constraintVertical_bias="0.205" />
+
+    <Spinner
+        android:id="@+id/teacheridspinner"
+        android:layout_width="166dp"
+
+        android:layout_height="46dp"
+
+        android:background="@drawable/round"
+        android:textAlignment="gravity"
+        android:textColor="#0C0C0C"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.914"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/teacheridspinner3"
+        app:layout_constraintVertical_bias="0.116" />
 
     <TextView
         android:id="@+id/updatePAGEtv3"
@@ -40,33 +74,51 @@
 
     <TextView
         android:id="@+id/coursenametextview"
-        android:layout_width="168dp"
-        android:layout_height="75dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:text="Course Name"
         android:textAlignment="center"
-        android:textColor="#0C0C0C"
-        android:textSize="25sp"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintEnd_toStartOf="@+id/teacheridspinner3"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.225" />
+        app:layout_constraintTop_toBottomOf="@+id/updatePAGEtv3"
+        app:layout_constraintVertical_bias="0.207" />
+
+    <TextView
+        android:id="@+id/coursenametextview2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Course Year"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/teacheridspinner"
+        app:layout_constraintHorizontal_bias="0.389"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/coursenametextview"
+        app:layout_constraintVertical_bias="0.137" />
 
     <TextView
         android:id="@+id/semestertextview"
-        android:layout_width="150dp"
-        android:layout_height="56dp"
-        android:text="Semester"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Class Name"
         android:textAlignment="center"
-        android:textColor="#0C0C0C"
-        android:textSize="25sp"
+        android:textColor="#000000"
+        android:textSize="33sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.061"
+        app:layout_constraintEnd_toStartOf="@+id/Class"
+        app:layout_constraintHorizontal_bias="0.46"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.45" />
+        app:layout_constraintTop_toBottomOf="@+id/coursenametextview2"
+        app:layout_constraintVertical_bias="0.15" />
 
     <Button
         android:id="@+id/submitbutton"
@@ -75,62 +127,14 @@
         android:background="@drawable/round_for_submit"
 
         android:text="Submit"
+        android:textColor="#0C0C0C"
         android:textSize="24dp"
-        android:textColor="#0C0C0C"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.931" />
-
-    <EditText
-        android:id="@+id/nametextview_coursename"
-        android:layout_width="170dp"
-        android:layout_height="62dp"
-        android:background="#FFFFFF"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        android:textAlignment="center"
-
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.97"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.221" />
-
-    <Spinner
-        android:id="@+id/semesteridspinner"
-        android:layout_width="154dp"
-        android:layout_height="55dp"
-        android:background="#FFFFFF"
-
-        android:textAlignment="gravity"
-        android:textColor="#0C0C0C"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.937"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.451" />
-
-    <TextView
-        android:id="@+id/teachertv1"
-        android:layout_width="150dp"
-        android:layout_height="56dp"
-        android:text="Teacher"
-        android:textAlignment="center"
-        android:textColor="#0C0C0C"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.061"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.645" />
+        app:layout_constraintTop_toBottomOf="@+id/semestertextview"
+        app:layout_constraintVertical_bias="0.542" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

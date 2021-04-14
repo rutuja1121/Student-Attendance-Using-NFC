@@ -11,7 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".TeacherMainPage"></activity>
+        <activity android:name=".ViewAttendanceList"></activity>
+        <activity android:name=".TeacherSubject" />
+        <activity android:name=".TeacherMainPage" />
         <activity android:name=".NewUserAdmin" />
         <activity android:name=".UsersCategoty" />
         <activity android:name=".NewUserTeacher" />

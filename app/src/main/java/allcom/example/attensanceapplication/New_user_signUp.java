@@ -36,7 +36,7 @@ public class New_user_signUp extends AppCompatActivity {
     public static final String TAG1 = "TAG";
     TextView CreateNew,Category3;
     RadioGroup radiogroup;
-    EditText Name3,Email3,PhoneNumber3,Password3,ReEnterPassword3,AcademicYear3,NfcTag3;
+    EditText Name3,Email3,PhoneNumber3,Password3,ReEnterPassword3,AcademicYear3,NfcTag3,Divison;
     Spinner Academicyear;
     Button SubmitButton3;
     String userID;
@@ -66,6 +66,7 @@ public class New_user_signUp extends AppCompatActivity {
         ReEnterPassword3=findViewById(R.id.ReEnterPassword3);
         AcademicYear3=findViewById(R.id.AcademicYear3);
         NfcTag3=findViewById(R.id.NfcTag3);
+        Divison=findViewById(R.id.Division);
         SubmitButton3=findViewById(R.id.SubmitButton3);
 
         Academicyear=findViewById(R.id.Academicyear);
@@ -83,6 +84,7 @@ public class New_user_signUp extends AppCompatActivity {
             final String name = Name3.getText().toString();
             final String email = Email3.getText().toString().trim();
             final String phoneNo = PhoneNumber3.getText().toString().trim();
+            String Div=Divison.getText().toString().trim();
             String password = Password3.getText().toString().trim();
             String repassword = ReEnterPassword3.getText().toString().trim();
 
@@ -106,6 +108,9 @@ public class New_user_signUp extends AppCompatActivity {
                 Password3.setError("Enter Password");
                 return;
             }
+            else  if(TextUtils.isEmpty(Div)){
+                Divison.setError("EnterDivison");
+            }
             else if (password.length() < 6){
                 Password3.setError("Password must be greater or Equal to 6 characters");
                 return;
@@ -127,6 +132,7 @@ public class New_user_signUp extends AppCompatActivity {
                         user.put("Name3",name);
                         user.put("Email3",email);
                         user.put("PhoneNumber3",phoneNo);
+                        user.put("Division3",Div);
                         user.put("userType","student");
                         documentReference.set(user).addOnSuccessListener(aVoid -> Log.d(TAG1,"onSuccess: user profile is created for"  + userID));
                         Intent intent =new Intent(New_user_signUp.this,Login_Page.class);

@@ -85,7 +85,10 @@ public class Login_Page extends AppCompatActivity {
                                 finish();
                             }
                             else if(documentSnapshot.getString("userType").equals("student")){
-                                startActivity(new Intent(Login_Page.this,Subject_selet_student.class));
+                                Intent i=new Intent(Login_Page.this,ViewAttendanceList.class);
+                                i.putExtra("Student name",documentSnapshot.get("Name3").toString());
+                                i.putExtra("Division",documentSnapshot.get("Division3").toString());
+                                startActivity(i);
                                 i1=2;
                                 finish();
                             }
