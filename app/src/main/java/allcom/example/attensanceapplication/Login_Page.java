@@ -8,6 +8,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -34,6 +35,8 @@ public class Login_Page extends AppCompatActivity {
     Button LoginTwo;
     TextView Or, SignUpTwo, ForgotpasswordTwo;
     EditText EmailTwo, PasswordTwo;
+    //String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
+    //String emailPattern = "ves_id.indexOf(\"@ves.ac.in\")<1";
     ImageView Logo;
     RadioGroup radio;
     FirebaseAuth mAuth;
@@ -59,55 +62,67 @@ public class Login_Page extends AppCompatActivity {
             Toast.makeText(this, "hello", Toast.LENGTH_SHORT).show();
             mAuth.signOut();
         }
-        System.out.println("myhello "+mAuth);
+        System.out.println("Hello User "+mAuth);
         LoginTwo.setOnClickListener(view -> {
             String email = EmailTwo.getText().toString().trim();
             String password = PasswordTwo.getText().toString().trim();
             if (TextUtils.isEmpty(email)) {
                 EmailTwo.setError("Email is Required.");
                 return;
-            }
-            else if (TextUtils.isEmpty(password)) {
-                PasswordTwo.setError("Password is required");
-                return;
-            }
-            else{
-                mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(task -> {
-                    if (task.isSuccessful()) {
-                        Toast.makeText(Login_Page.this, "Logged in successfully", Toast.LENGTH_SHORT).show();
-                        DocumentReference df = FirebaseFirestore.getInstance().collection("users").document(FirebaseAuth.getInstance().getCurrentUser().getUid());
-                        df.get().addOnSuccessListener(documentSnapshot -> {
-                            if(documentSnapshot.getString("userType").equals("teacher")){
-                                Intent intent=new Intent(Login_Page.this,TeacherMainPage.class);
-                                intent.putExtra("Teacher name",documentSnapshot.get("Name3").toString());
-                                startActivity(intent);
-                                i1=2;
-                                finish();
-                            }
-                            else if(documentSnapshot.getString("userType").equals("student")){
-                                Intent i=new Intent(Login_Page.this,ViewAttendanceList.class);
-                                i.putExtra("Student name",documentSnapshot.get("Name3").toString());
-                                i.putExtra("Division",documentSnapshot.get("Division3").toString());
-                                startActivity(i);
-                                i1=2;
-                                finish();
-                            }
-
-                            else if(documentSnapshot.getString("userType").equals("admin")){
-                                startActivity(new Intent(Login_Page.this,Admin.class));
-                                i1=2;
-                                finish();
-                            }
-                            else{
-                                Toast.makeText(Login_Page.this, " Error! ", Toast.LENGTH_SHORT);
-                            }
-                        });
-                    } else {
-                        Toast.makeText(Login_Page.this, " Error! " + task.getException().getMessage(), Toast.LENGTH_SHORT);
+            } else {
+                    if (EmailTwo.getText().toString().trim().contains("@ves.ac.in")){
+                        Toast.makeText(getApplicationContext(),"valid email address",Toast.LENGTH_SHORT);
+                    } else  {
+                        Toast.makeText(getApplicationContext(),"Invalid email address", Toast.LENGTH_SHORT).show();
                     }
-                });
-            }
+                }
+
+                 if (TextUtils.isEmpty(password)) {
+                    PasswordTwo.setError("Password is required");
+                    return;
+                }
+                else{
+                    mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(task -> {
+                        if (task.isSuccessful()) {
+                            Toast.makeText(Login_Page.this, "Logged in successfully", Toast.LENGTH_SHORT).show();
+                            DocumentReference df = FirebaseFirestore.getInstance().collection("users").document(FirebaseAuth.getInstance().getCurrentUser().getUid());
+                            df.get().addOnSuccessListener(documentSnapshot -> {
+                                if (documentSnapshot.getString("userType").equals("teacher")) {
+                                    Intent intent = new Intent(Login_Page.this, TeacherMainPage.class);
+                                    intent.putExtra("Teacher name", documentSnapshot.get("Name3").toString());
+                                    startActivity(intent);
+                                    i1 = 2;
+                                    finish();
+                                }
+
+                                else if(documentSnapshot.getString("userType").equals("student")){
+                                    Intent i=new Intent(Login_Page.this,ViewAttendanceList.class);
+                                    i.putExtra("Student name",documentSnapshot.get("Name3").toString());
+                                    i.putExtra("Division",documentSnapshot.get("Division3").toString());
+                                    startActivity(i);
+                                    i1=2;
+                                    finish();
+                                }
+
+
+                                else if(documentSnapshot.getString("userType").equals("admin")){
+                                    startActivity(new Intent(Login_Page.this,Admin.class));
+                                    i1=2;
+                                    finish();
+                                }
+                                else{
+                                    Toast.makeText(Login_Page.this, " Error! ", Toast.LENGTH_SHORT);
+                                }
+                            });
+                        } else {
+                            Toast.makeText(Login_Page.this, " Error! " + task.getException().getMessage(), Toast.LENGTH_SHORT);
+                        }
+                    });
+                }
+
         });
+
+
 
         SignUpTwo.setOnClickListener(view -> {
             Intent intent = new Intent(Login_Page.this, UsersCategoty.class);
