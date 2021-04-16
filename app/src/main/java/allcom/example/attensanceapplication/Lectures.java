@@ -15,7 +15,7 @@ public class Lectures {
 
     }
 
-    public Lectures(String teacherId, String teacherName, String selectedYear, String selectedClass, String selectedDivision, String selectedSubject, String selectedDate, String selectedTime) {
+    public Lectures(String teacherId, String teacherName, String selectedYear, String selectedClass, String selectedDivision, String selectedSubject/*, String selectedDate, String selectedTime*/) {
         this.teacherId = teacherId;
         this.teacherName = teacherName;
         this.selectedYear = selectedYear;

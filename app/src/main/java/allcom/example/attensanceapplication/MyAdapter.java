@@ -16,13 +16,15 @@ import java.util.List;
 class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder>{
     private List<Classes> listData;
     private String teacherName;
-    private String student;
+    private String student,value;
+
     Context context;
-    public MyAdapter(Context context, List<Classes> listData, String teacherName, String student) {
+    public MyAdapter(Context context, List<Classes> listData, String teacherName, String student,String value) {
         this.listData = listData;
         this.teacherName=teacherName;
         this.student=student;
         this.context=context;
+        this.value=value;
     }
 
     @NonNull
@@ -36,9 +38,27 @@ class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder>{
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Classes ld=listData.get(position);
 //        holder.txtid.setText(ld.teacherId);
-        if(teacherName!=null) {
+
+        if(teacherName!=null&&value!=null) {
             holder.txtname.setText(ld.selectedSubject);
             holder.txtmovie.setText(ld.selectedDivision);
+        }
+       else if(teacherName!=null){
+            holder.txtname.setText(ld.selectedSubject);
+            holder.txtmovie.setText(ld.selectedDivision);
+            holder.cardView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent i=new Intent(context,Day_date_student.class);
+                    i.putExtra("teacher id",ld.teacherId);
+                    i.putExtra("teacherName",ld.teacherName);
+                    i.putExtra("selectedYear",ld.selectedYear);
+                    i.putExtra("selectedSubject",ld.selectedSubject);
+                    i.putExtra("selectedDivision",ld.selectedDivision);
+                    i.putExtra("selectedClass",ld.selectedClass);
+                    context.startActivity(i);
+                }
+            });
         }
         if(student!=null){
             holder.txtname.setText(ld.teacherName+"'s");

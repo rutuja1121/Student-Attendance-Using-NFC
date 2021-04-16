@@ -12,7 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class Select_year_teacher extends AppCompatActivity {
-    TextView Teachers7,SelectTeachers7;
+    TextView Teachers7,SelectTeachers7,teachename;
     RadioGroup radioGroup2 ;
     RadioButton FeButton7,SeButton7,TeButton7,BeButton7;
     Button SubmitButton7;
@@ -31,10 +31,11 @@ public class Select_year_teacher extends AppCompatActivity {
         TeButton7 = findViewById(R.id.TeButton7);
         BeButton7= findViewById(R.id.BeButton7);
         SubmitButton7= findViewById(R.id.attendance);
+        teachename=findViewById(R.id.Tname);
         radioGroup2=findViewById(R.id.radiogroup);
 
-        String teachename=getIntent().getStringExtra("Teacher name");
-        Toast.makeText(this, ""+teachename, Toast.LENGTH_SHORT).show();
+       // String teachename=getIntent().getStringExtra("Teacher name");
+       // Toast.makeText(this, ""+teachename, Toast.LENGTH_SHORT).show();
         SubmitButton7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -42,7 +43,7 @@ public class Select_year_teacher extends AppCompatActivity {
                 FindButton=findViewById(radioid);
                 String Year=FindButton.getText().toString();
                 Intent intent =new Intent(Select_year_teacher.this,Select_Division.class);
-                intent.putExtra("Teacher name",teachename);
+                intent.putExtra("Teacher name",teachename.getText().toString());
                 intent.putExtra("Teacher Year",Year);
                 startActivity(intent);
             }

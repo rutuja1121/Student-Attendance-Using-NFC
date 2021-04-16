@@ -21,7 +21,7 @@ public class TeacherMainPage extends AppCompatActivity {
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i=new Intent(getApplicationContext(),Select_year_teacher.class);
+                Intent i=new Intent(getApplicationContext(),ViewAttendanceList.class);
                 i.putExtra("Teacher name",teachername);
                 startActivity(i);
             }
@@ -31,6 +31,7 @@ public class TeacherMainPage extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i =new Intent(getApplicationContext(),ViewAttendanceList.class);
                 i.putExtra("Teacher name",teachername);
+                i.putExtra("value","1");
                 startActivity(i);
             }
         });

@@ -44,6 +44,10 @@ public class Admin extends AppCompatActivity {
                     Intent intent=new Intent(Admin.this,Update_Page.class);//Select_year_teacher
                     startActivity(intent);
                 }
+                else if(FindButton.getText().equals("Set Attendance")){
+                    Intent intent=new Intent(getApplicationContext(),Select_year_teacher.class);
+                    startActivity(intent);
+                }
             }
         });
         logout.setOnClickListener(new View.OnClickListener() {

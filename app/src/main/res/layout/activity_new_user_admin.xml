@@ -25,7 +25,7 @@
         android:id="@+id/aname"
         android:layout_width="340dp"
         android:layout_height="54dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="32dp"
         android:background="@drawable/round"
         android:ems="10"
         android:hint="  Enter Name"
@@ -33,6 +33,7 @@
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/editTextTextEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText

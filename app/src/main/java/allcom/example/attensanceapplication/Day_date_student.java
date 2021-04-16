@@ -30,7 +30,7 @@ public class Day_date_student extends AppCompatActivity {
     private int mHour, mMinute;
     String day1;
     SimpleDateFormat simpleDateFormat;
-    String teacherName,Class,Division,Subject,Year;
+    String teacherName,Class,Division,Subject,Year,teacherId;
 
     @SuppressWarnings("unchecked")
     @Override
@@ -44,14 +44,15 @@ public class Day_date_student extends AppCompatActivity {
         time2 = findViewById(R.id.totime);
         timebtn2 = findViewById(R.id.timebtn1);
         choose_date = findViewById(R.id.choose_date);
-        teacherName=getIntent().getStringExtra("Teacher name");
-        Class=getIntent().getStringExtra("Class");
-        Division=getIntent().getStringExtra("Division");
-        Subject=getIntent().getStringExtra("Subject");
-        Year=getIntent().getStringExtra("Year");
+        teacherId=getIntent().getStringExtra("teacher id");
+        teacherName=getIntent().getStringExtra("teacherName");
+        Class=getIntent().getStringExtra("selectedClass");
+        Division=getIntent().getStringExtra("selectedDivision");
+        Subject=getIntent().getStringExtra("selectedSubject");
+        Year=getIntent().getStringExtra("selectedYear");
         simpleDateFormat=new SimpleDateFormat("dd-MM-yyyy");
         day1=simpleDateFormat.format(new Date());
-        databaseReference= FirebaseDatabase.getInstance().getReference("teachers");
+        databaseReference= FirebaseDatabase.getInstance().getReference("Attendence");
         Toast.makeText(this, teacherName+" "+Class+" "+Division+" "+Year+" "+Subject, Toast.LENGTH_SHORT).show();
 
         calender.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
@@ -117,9 +118,9 @@ public class Day_date_student extends AppCompatActivity {
                 if(!(time.getText().toString().isEmpty())&&!(time2.getText().toString().isEmpty())){
                     String finaltime=time.getText().toString()+" to "+time2.getText().toString();
                     String id=databaseReference.push().getKey();
-                    attendanceRef=FirebaseDatabase.getInstance().getReference("teachers").child(id);
+                    attendanceRef=FirebaseDatabase.getInstance().getReference("Attendence").child(id);
                     String id1=attendanceRef.push().getKey();
-                    Lectures lectures=new Lectures(id,teacherName,Year,Class,Division,Subject,day1,finaltime);
+                    Lectures lectures=new Lectures(id,teacherName,Year,Class,Division,Subject);
                     databaseReference.child(id).setValue(lectures);
                     attendanceRef.child("attendee list").setValue("");
                     Toast.makeText(Day_date_student.this, "Attendance Started", Toast.LENGTH_SHORT).show();

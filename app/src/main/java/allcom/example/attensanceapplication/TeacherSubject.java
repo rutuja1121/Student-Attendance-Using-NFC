@@ -15,6 +15,9 @@ import android.widget.ExpandableListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -22,6 +25,7 @@ import java.util.List;
 public class TeacherSubject extends AppCompatActivity {
 
     ExpandableListAdapter listAdapter;
+    DatabaseReference databaseReference/*,attendanceRef*/;
     ExpandableListView expListView;
     List<String> listDataHeader;
     HashMap<String, List<String>> listDataChild;
@@ -39,6 +43,7 @@ public class TeacherSubject extends AppCompatActivity {
         Class=getIntent().getStringExtra("Class");
         String Division=getIntent().getStringExtra("Division");
             System.out.println("helloo " + TeacherYear);
+        databaseReference= FirebaseDatabase.getInstance().getReference("teachers");
         Toast.makeText(this, ""+Class, Toast.LENGTH_SHORT).show();
             Toast.makeText(this, "" + TeacherName + TeacherYear, Toast.LENGTH_SHORT).show();
             // get the listview
@@ -96,15 +101,28 @@ public class TeacherSubject extends AppCompatActivity {
 //                                    listDataHeader.get(groupPosition)).get(
 //                                    childPosition), Toast.LENGTH_SHORT)
 //                            .show();
-                    Intent i =new Intent(getApplicationContext(),Day_date_student.class);
-                    i.putExtra("Teacher name",TeacherName);
-                    i.putExtra("Division",Division);
-                    i.putExtra("Year",TeacherYear);
-                    i.putExtra("Class",listDataHeader.get(groupPosition));
-                    i.putExtra("Subject",listDataChild.get(
-                            listDataHeader.get(groupPosition)).get(
-                            childPosition));
-                    startActivity(i);
+//                    Intent i =new Intent(getApplicationContext(),Day_date_student.class);
+//                    i.putExtra("Teacher name",TeacherName);
+//                    i.putExtra("Division",Division);
+//                    i.putExtra("Year",TeacherYear);
+//                    i.putExtra("Class",listDataHeader.get(groupPosition));
+//                    i.putExtra("Subject",listDataChild.get(
+//                            listDataHeader.get(groupPosition)).get(
+//                            childPosition));
+//                    startActivity(i);
+                    String id=databaseReference.push().getKey();
+                   // attendanceRef=FirebaseDatabase.getInstance().getReference("teachers").child(id);
+                   // String id1=attendanceRef.push().getKey();
+                    Lectures lectures=new Lectures(id,TeacherName,TeacherYear,Class,Division,listDataChild.get(
+                            listDataHeader.get(groupPosition))
+                            .get(childPosition));
+                    databaseReference.child(id).setValue(lectures);
+                    //attendanceRef.child("attendee list").setValue("");
+                    Toast.makeText(getApplicationContext(), "Attendance Started", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(getApplicationContext(), Admin.class);
+                    startActivity(intent);
+                    finishAffinity();
+
                     return false;
                 }
             });

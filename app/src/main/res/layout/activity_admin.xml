@@ -96,6 +96,15 @@
             android:layout_marginBottom="20dp"
             android:textColor="#FFFFFF"
             android:textSize="30sp" />
+
+        <RadioButton
+            android:id="@+id/edit_Details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="Set Attendance"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp" />
     </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
