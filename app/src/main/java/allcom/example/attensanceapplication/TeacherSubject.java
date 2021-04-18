@@ -174,13 +174,13 @@ public class TeacherSubject extends AppCompatActivity {
                 top250.add("Digital Logic & Computer Architecture");
                 top250.add("Computer Graphics");
             }else if(TeacherYear.equals("Third Year")){
-                top250.add("D12A");
-                top250.add("D12B");
-                top250.add("D12C");
+                top250.add("Computer Network");
+                top250.add("Theory of Computer Science");
             }else if(TeacherYear.equals("Fourth Year")){
-                top250.add("D17A");
-                top250.add("D17B");
-                top250.add("D17C");
+                top250.add("Digital Signal & Image Processing");
+                top250.add("Mobile Communication & Computing");
+                top250.add("Artificial Intelligence & Soft Computing");
+                top250.add("Department Level Optional Course -III");
             }
             List<String> nowShowing = new ArrayList<String>();
             if(TeacherYear.equals("First Year")) {
@@ -198,38 +198,41 @@ public class TeacherSubject extends AppCompatActivity {
                 nowShowing.add("Microprocessor");
             }
             else if(TeacherYear.equals("Third Year")){
-                nowShowing.add("D12A");
-                nowShowing.add("D12B");
-                nowShowing.add("D12C");
+                nowShowing.add("System Programming & Compiler Construction");
+                nowShowing.add("Cryptography & System Security");
+                nowShowing.add("Software Engineering");
+                nowShowing.add("Data Warehousing & Mining");
+                nowShowing.add("Machine Learning(Elective)");
             }
             else if(TeacherYear.equals("Fourth Year")){
-                nowShowing.add("D16A");
-                nowShowing.add("D16B");
-                nowShowing.add("D16C");
+                nowShowing.add("Distributed Computing");
+                nowShowing.add("Human Machine Interaction");
+                nowShowing.add("Project Management");
+                nowShowing.add("Natural Language Processing");
             }
-            List<String> comingSoon = new ArrayList<String>();
-            if(TeacherYear.equals("First Year")) {
-                comingSoon.add("Engineering Mathematics-II");
-                comingSoon.add("Engineering Physics-II");
-                comingSoon.add("Engineering Chemistry-II");
-                comingSoon.add("Engineering Graphics");
-                comingSoon.add("C programming");
-            }
-            else if(TeacherYear.equals("Second Year")){
-                comingSoon.add("D15A");
-                comingSoon.add("D15B");
-                comingSoon.add("D15C");
-            }
-            else if(TeacherYear.equals("Third Year")){
-                comingSoon.add("D20A");
-                comingSoon.add("D20B");
-                comingSoon.add("D20C");
-            }
-            else if(TeacherYear.equals("Fourth Year")){
-                comingSoon.add("D25A");
-                comingSoon.add("D25B");
-                comingSoon.add("D25C");
-            }
+//            List<String> comingSoon = new ArrayList<String>();
+//            if(TeacherYear.equals("First Year")) {
+//                comingSoon.add("Engineering Mathematics-II");
+//                comingSoon.add("Engineering Physics-II");
+//                comingSoon.add("Engineering Chemistry-II");
+//                comingSoon.add("Engineering Graphics");
+//                comingSoon.add("C programming");
+//            }
+//            else if(TeacherYear.equals("Second Year")){
+//                comingSoon.add("D15A");
+//                comingSoon.add("D15B");
+//                comingSoon.add("D15C");
+//            }
+//            else if(TeacherYear.equals("Third Year")){
+//                comingSoon.add("D20A");
+//                comingSoon.add("D20B");
+//                comingSoon.add("D20C");
+//            }
+//            else if(TeacherYear.equals("Fourth Year")){
+//                comingSoon.add("D25A");
+//                comingSoon.add("D25B");
+//                comingSoon.add("D25C");
+//            }
 
             listDataChild.put(listDataHeader.get(0), top250); // Header, Child data
             listDataChild.put(listDataHeader.get(1), nowShowing);

@@ -74,6 +74,7 @@ public class Login_Page extends AppCompatActivity {
                         Toast.makeText(getApplicationContext(),"valid email address",Toast.LENGTH_SHORT);
                     } else  {
                         Toast.makeText(getApplicationContext(),"Invalid email address", Toast.LENGTH_SHORT).show();
+                        return;
                     }
                 }
 
