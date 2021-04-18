@@ -108,10 +108,11 @@
 
     <Button
         android:id="@+id/attendance"
-        android:layout_width="156dp"
-        android:layout_height="49dp"
+        android:layout_width="170dp"
+        android:layout_height="60dp"
         android:background="@drawable/round_for_submit"
         android:text="SUBMIT"
+        android:textColor="#FFFFFF"
         android:textSize="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

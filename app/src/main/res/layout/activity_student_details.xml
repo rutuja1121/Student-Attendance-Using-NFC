@@ -4,279 +4,250 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Student_details"
-    android:background="#3B7393">
+    android:background="#3B7393"
+    tools:context=".Student_details">
 
     <EditText
         android:id="@+id/parentemailet"
-        android:layout_width="214dp"
-        android:layout_height="50dp"
-        android:background="#FFFFFF"
+        android:layout_width="207dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="28dp"
+        android:background="@drawable/round"
         android:ems="10"
+
         android:hint="Parent Email"
         android:inputType="textEmailAddress"
-
         android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.806" />
+        app:layout_constraintBottom_toTopOf="@+id/studentsubmitbutton"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
         android:id="@+id/studentemailet"
-        android:layout_width="210dp"
-        android:layout_height="38dp"
-        android:background="#FFFFFF"
+        android:layout_width="207dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/round"
         android:ems="10"
+
+
         android:hint="Student email"
         android:inputType="textEmailAddress"
-
-
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.487" />
+        app:layout_constraintBottom_toTopOf="@+id/parentnameet"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
         android:id="@+id/phonenoet"
-        android:layout_width="209dp"
+        android:layout_width="207dp"
         android:layout_height="45dp"
-        android:background="#FFFFFF"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/round"
         android:ems="10"
+
         android:hint="Phone no"
         android:inputType="number"
-
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.386" />
+        app:layout_constraintBottom_toTopOf="@+id/studentemailet"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
         android:id="@+id/studentnameet"
         android:layout_width="207dp"
-        android:layout_height="40dp"
-        android:background="#FFFFFF"
+        android:layout_height="45dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/round"
         android:ems="10"
+
         android:hint="Student name"
         android:inputType="textPersonName"
-
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.173" />
+        app:layout_constraintBottom_toTopOf="@+id/classspinner"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
         android:id="@+id/parentnameet"
-        android:layout_width="201dp"
-        android:layout_height="48dp"
-        android:background="#FFFFFF"
+        android:layout_width="207dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/round"
         android:ems="10"
         android:hint="\Parent name"
         android:inputType="textPersonName"
         android:textColor="#0C0C0C"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.592" />
+        app:layout_constraintBottom_toTopOf="@+id/parentnameet1"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
         android:id="@+id/parentemailtv"
-        android:layout_width="154dp"
-        android:layout_height="37dp"
+        android:layout_width="107dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
         android:text="Parent email"
-        android:textAlignment="center"
-        android:textColor="#0C0C0C"
 
+        android:textAlignment="viewStart"
+        android:textColor="#0C0C0C"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.062"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.791" />
+        app:layout_constraintBottom_toTopOf="@+id/studentsubmitbutton"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/studentnametv"
-        android:layout_width="195dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="4dp"
-        android:text="Student Name"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_marginStart="16dp"
 
 
-        android:textAlignment="center"
+        android:layout_marginBottom="16dp"
+        android:text="Name"
+        android:textAlignment="viewStart"
         android:textColor="#0C0C0C"
         android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/studentnameet"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.174" />
+        app:layout_constraintBottom_toTopOf="@+id/classtv"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/classtv"
         android:layout_width="152dp"
-        android:layout_height="53dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
         android:text="Class"
-        android:textAlignment="center"
-        android:textColor="#0C0C0C"
 
+        android:textAlignment="viewStart"
+        android:textColor="#0C0C0C"
         android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.061"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.281" />
+        app:layout_constraintBottom_toTopOf="@+id/phonenotv"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/phonenotv"
         android:layout_width="152dp"
-        android:layout_height="53dp"
+        android:layout_height="45dp"
 
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
         android:text="Phone no"
-        android:textAlignment="center"
+        android:textAlignment="viewStart"
         android:textColor="#0C0C0C"
         android:textSize="25dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.096"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.39" />
+        app:layout_constraintBottom_toTopOf="@+id/studentemail"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/parentnametv"
-        android:layout_width="152dp"
-        android:layout_height="57dp"
+        android:layout_width="107dp"
+        android:layout_height="60dp"
 
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
         android:text="Parent Name"
-        android:textAlignment="center"
+        android:textAlignment="viewStart"
         android:textColor="#0C0C0C"
         android:textSize="25dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.011"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.599" />
+        app:layout_constraintBottom_toTopOf="@+id/parentphntv"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/studentemail"
         android:layout_width="152dp"
-        android:layout_height="53dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
         android:text="Email"
-        android:textAlignment="center"
+        android:textAlignment="viewStart"
         android:textColor="#0C0C0C"
         android:textSize="25dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/studentemailet"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.486" />
+        app:layout_constraintBottom_toTopOf="@+id/parentnametv"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/parentnameet1"
-        android:layout_width="206dp"
-        android:layout_height="37dp"
-        android:background="#FFFFFF"
+        android:layout_width="207dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/round"
+
         android:ems="10"
         android:hint="Parent phone no"
         android:inputType="number"
-
         android:textSize="25dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.691" />
+        app:layout_constraintBottom_toTopOf="@+id/parentemailet"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <Spinner
         android:id="@+id/classspinner"
-        android:layout_width="213dp"
-        android:layout_height="52dp"
+        android:layout_width="207dp"
+        android:layout_height="45dp"
 
-        android:layout_marginStart="204dp"
-        android:background="#FFFFFF"
+        android:layout_marginEnd="16dp"
 
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.281" />
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/round"
+        app:layout_constraintBottom_toTopOf="@+id/phonenoet"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
         android:id="@+id/parentphntv"
-        android:layout_width="182dp"
-        android:layout_height="54dp"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
         android:text="Parent phone no"
-        android:textAlignment="center"
+        android:textAlignment="viewStart"
         android:textColor="#0C0C0C"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/parentnameet1"
-        app:layout_constraintHorizontal_bias="0.521"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.707" />
+        android:textSize="23sp"
+        app:layout_constraintBottom_toTopOf="@+id/parentemailtv"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/studentsubmitbutton"
-        android:layout_width="176dp"
-        android:layout_height="59dp"
-        android:background="#47C54C"
+        android:layout_width="170dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="48dp"
+        android:background="@drawable/round_for_submit"
         android:outlineAmbientShadowColor="@color/colorPrimary"
         android:shadowColor="#4CAF50"
         android:text="Submit"
-        android:textColor="#0C0C0C"
-        android:textSize="24dp"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.446"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.93" />
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/studentdetailstv"
-        android:layout_width="386dp"
-        android:layout_height="67dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
 
+        android:layout_marginTop="16dp"
         android:text="Student Details"
         android:textAlignment="center"
         android:textColor="#FFFF"
-        android:textSize="50dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.48"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.007" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/StudentID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="73dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
         android:textColor="#0C0C0C"
         android:textSize="20dp"
-        android:textStyle="bold"
-        app:layout_constraintTop_toTopOf="@+id/studentdetailstv" />
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/studentdetailstv" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

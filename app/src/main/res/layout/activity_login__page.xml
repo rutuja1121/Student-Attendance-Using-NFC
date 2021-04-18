@@ -4,115 +4,104 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Login_Page"
-android:background="#3B7393">
-
-<ImageView
-    android:id="@+id/Logo"
-    android:layout_width="210dp"
-    android:layout_height="179dp"
-
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintHorizontal_bias="0.497"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintVertical_bias="0.065"
-    app:srcCompat="@drawable/vesit_logo" />
+    android:background="#3B7393"
+    tools:context=".Login_Page">
 
     <EditText
         android:id="@+id/EmailTwo"
         android:layout_width="316dp"
         android:layout_height="52dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/round"
         android:ems="10"
         android:hint="Email:"
         android:inputType="textEmailAddress"
         android:textSize="24dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.346" />
+        app:layout_constraintTop_toBottomOf="@+id/Logo" />
 
     <EditText
         android:id="@+id/PasswordTwo"
         android:layout_width="315dp"
         android:layout_height="59dp"
+        android:layout_marginTop="24dp"
         android:background="@drawable/round"
         android:ems="10"
         android:hint="Password:"
         android:inputType="textPassword"
         android:textSize="24dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.444" />
+        app:layout_constraintTop_toBottomOf="@+id/EmailTwo" />
 
     <Button
         android:id="@+id/LoginTwo"
         android:layout_width="170dp"
         android:layout_height="60dp"
+        android:layout_marginTop="24dp"
         android:background="@drawable/round_for_submit"
         android:text="Login"
         android:textColor="#FFFFFF"
         android:textSize="32dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.594" />
+        app:layout_constraintTop_toBottomOf="@+id/PasswordTwo" />
 
 
     <TextView
         android:id="@+id/Or"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="----------------  OR  ----------------"
+        android:layout_width="361dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="6dp"
+        android:text="-------- OR --------"
+        android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="27dp"
-        android:textAlignment="center"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.698" />
+        app:layout_constraintTop_toBottomOf="@+id/LoginTwo" />
 
     <TextView
         android:id="@+id/SignUpTwo"
         android:layout_width="307dp"
         android:layout_height="34dp"
+        android:layout_marginTop="24dp"
         android:text="New User? Sign Up"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="24dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.779" />
+        app:layout_constraintTop_toBottomOf="@+id/Or" />
 
     <TextView
         android:id="@+id/ForgotpasswordTwo"
         android:layout_width="300dp"
         android:layout_height="40dp"
+        android:layout_marginTop="24dp"
         android:ems="10"
         android:text="Forgot Password?"
-        android:textAlignment="center"
-        android:textColor="#FFFFFF"
 
+        android:textAlignment="center"
+
+        android:textColor="#FFFFFF"
         android:textSize="24dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SignUpTwo" />
 
+    <ImageView
+        android:id="@+id/Logo"
+        android:layout_width="139dp"
+        android:layout_height="196dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.849" />
+        app:srcCompat="@drawable/final_logo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

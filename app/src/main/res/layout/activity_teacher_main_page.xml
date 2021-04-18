@@ -9,40 +9,26 @@
 
 
     <TextView
-        android:id="@+id/Teachers7"
-        android:layout_width="224dp"
-        android:layout_height="108dp"
-        android:text="Teachers Page"
-        android:textAlignment="center"
-        android:textColor="#0C0C0C"
-        android:textSize="40sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.071" />
-
-    <TextView
         android:id="@+id/teachers"
-        android:layout_width="351dp"
-        android:layout_height="75dp"
-        android:text="Set/View Attendance"
+        android:layout_width="355dp"
+        android:layout_height="54dp"
+        android:background="@drawable/round"
+        android:text="Take/View Attendance"
         android:textAlignment="center"
         android:textColor="#0C0C0C"
-        android:textSize="37sp"
-        android:textStyle="bold"
+        android:textSize="34sp"
+        android:textStyle="normal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.246" />
+        app:layout_constraintVertical_bias="0.054" />
 
     <Button
         android:id="@+id/attendance"
-        android:layout_width="230dp"
-        android:layout_height="76dp"
-        android:layout_marginTop="62dp"
+        android:layout_width="316dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/round_for_submit"
         android:text="Take Attendance"
@@ -50,31 +36,33 @@
         android:textSize="26dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/teachers"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.247" />
 
     <Button
         android:id="@+id/List"
-        android:layout_width="233dp"
-        android:layout_height="79dp"
+        android:layout_width="316dp"
+        android:layout_height="50dp"
         android:background="@drawable/round_for_submit"
         android:text="View Attendee list"
         android:textColor="#ffffff"
         android:textSize="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/attendance"
-        app:layout_constraintVertical_bias="0.234" />
+        app:layout_constraintVertical_bias="0.104" />
 
     <Button
         android:id="@+id/View1"
-        android:layout_width="156dp"
-        android:layout_height="49dp"
+        android:layout_width="170dp"
+        android:layout_height="60dp"
         android:background="@drawable/round_for_submit"
         android:text="Log-out"
+        android:textColor="#FFFFFF"
         android:textSize="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -11,16 +11,17 @@ android:background="#3B7393">
         android:id="@+id/CreateNew"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
         android:text="Create New Account"
-        android:textColor="#000000"
 
-        android:textSize="40dp"
+        android:textColor="#000000"
+        android:textSize="36sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/Name3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <EditText
         android:id="@+id/Name3"
@@ -173,6 +174,7 @@ android:background="#3B7393">
 
         android:background="@drawable/round_for_submit"
         android:text="SUBMIT"
+        android:textColor="#FFFFFF"
         android:textSize="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

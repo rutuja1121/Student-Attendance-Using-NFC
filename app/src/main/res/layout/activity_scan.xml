@@ -4,44 +4,50 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Scan"
-    android:background="#3B7393">
-
-    <FrameLayout
-        android:layout_width="310dp"
-        android:layout_height="587dp"
-        android:background="@drawable/round"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="match_parent"
-            android:layout_height="582dp"
-            android:layout_marginBottom="80dp"
-            android:background="@drawable/round"
-            android:paddingTop="140dp"
-            android:text="Scan/Tap your NFC Tag"
-            android:textAlignment="center"
-            android:textColor="#0C0C0C"
-            android:textSize="40dp" />
-    </FrameLayout>
+    android:background="#3B7393"
+    tools:context=".Scan">
 
     <Button
         android:id="@+id/log"
         android:layout_width="176dp"
         android:layout_height="59dp"
+        android:layout_marginTop="227dp"
+        android:layout_marginBottom="32dp"
         android:background="@drawable/round_for_submit"
         android:text="Submit"
+        android:textColor="#FFFFFF"
         android:textSize="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.976" />
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout3"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout3"
+        android:layout_width="336dp"
+        android:layout_height="560dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/round"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="304dp"
+        android:layout_height="304dp"
+        android:text="Scan / Tap NFC Tag"
+        android:textColor="#000000"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toBottomOf="@+id/log"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/frameLayout3" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
