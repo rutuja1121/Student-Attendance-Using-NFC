@@ -120,7 +120,6 @@ public class Login_Page extends AppCompatActivity {
                         }
                     });
                 }
-
         });
 
 

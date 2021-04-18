@@ -30,7 +30,7 @@ public class Day_date_student extends AppCompatActivity {
     private int mHour, mMinute;
     String day1;
     SimpleDateFormat simpleDateFormat;
-    String teacherName,Class,Division,Subject,Year,teacherId;
+    String teacherName,Class,Division,Subject,Year,teacherId,teacherTime;
 
     @SuppressWarnings("unchecked")
     @Override
@@ -116,11 +116,11 @@ public class Day_date_student extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(!(time.getText().toString().isEmpty())&&!(time2.getText().toString().isEmpty())){
-                    String finaltime=time.getText().toString()+" to "+time2.getText().toString();
+                    teacherTime=time.getText().toString()+" to "+time2.getText().toString();
                     String id=databaseReference.push().getKey();
                     attendanceRef=FirebaseDatabase.getInstance().getReference("Attendence").child(id);
                     String id1=attendanceRef.push().getKey();
-                    Lectures lectures=new Lectures(id,teacherName,Year,Class,Division,Subject);
+                    attendancelist lectures=new attendancelist(id,teacherName,Year,Class,Division,Subject,day1,teacherTime);
                     databaseReference.child(id).setValue(lectures);
                     attendanceRef.child("attendee list").setValue("");
                     Toast.makeText(Day_date_student.this, "Attendance Started", Toast.LENGTH_SHORT).show();
