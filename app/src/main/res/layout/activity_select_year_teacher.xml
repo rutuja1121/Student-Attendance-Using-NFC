@@ -8,11 +8,25 @@
         android:background="#3B7393">
 
 
+    <EditText
+        android:id="@+id/Tname"
+        android:layout_width="292dp"
+        android:layout_height="45dp"
+        android:background="@drawable/round"
+        android:ems="10"
+        android:hint="  Enter Name"
+        android:inputType="textPersonName"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/SelectTeachers7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Teachers7" />
+
     <TextView
         android:id="@+id/Teachers7"
-        android:layout_width="205dp"
-        android:layout_height="78dp"
-        android:text="Teachers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Teachers Name"
         android:textAlignment="center"
         android:textColor="#0C0C0C"
         android:textSize="40sp"
@@ -21,7 +35,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.085" />
+        app:layout_constraintVertical_bias="0.024" />
 
     <TextView
         android:id="@+id/SelectTeachers7"
@@ -120,6 +134,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radiogroup"
         app:layout_constraintVertical_bias="0.212" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

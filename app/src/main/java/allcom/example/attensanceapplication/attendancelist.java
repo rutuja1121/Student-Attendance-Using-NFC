@@ -1,6 +1,6 @@
 package allcom.example.attensanceapplication;
 
-public class Lectures {
+public class attendancelist {
     String teacherId;
     String teacherName;
     String selectedYear;
@@ -11,11 +11,11 @@ public class Lectures {
     String selectedTime;
 
 
-    public Lectures(){
+    public attendancelist(){
 
     }
 
-    public Lectures(String teacherId, String teacherName, String selectedYear, String selectedClass, String selectedDivision, String selectedSubject/*, String selectedDate, String selectedTime*/) {
+    public attendancelist(String teacherId, String teacherName, String selectedYear, String selectedClass, String selectedDivision, String selectedSubject, String selectedDate, String selectedTime) {
         this.teacherId = teacherId;
         this.teacherName = teacherName;
         this.selectedYear = selectedYear;

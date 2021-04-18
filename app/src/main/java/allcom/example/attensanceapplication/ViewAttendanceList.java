@@ -32,6 +32,7 @@ public class ViewAttendanceList extends AppCompatActivity {
     private RecyclerView rv;
     private MyAdapter adapter;
     private ProgressBar mProgressBar;
+    String value;
     String teachername,student;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,23 +44,29 @@ public class ViewAttendanceList extends AppCompatActivity {
         mProgressBar = (ProgressBar) findViewById(R.id.progressBar);
         student= getIntent().getStringExtra("Student name");
         teachername=getIntent().getStringExtra("Teacher name");
+        value=getIntent().getStringExtra("value");
         String sDivision=getIntent().getStringExtra("Division");
        // Toast.makeText(this, ""+student, Toast.LENGTH_SHORT).show();
         listData = new ArrayList<>();
-        adapter = new MyAdapter(ViewAttendanceList.this,listData,teachername,student);
+        adapter = new MyAdapter(ViewAttendanceList.this,listData,teachername,student,value);
         RecyclerView.LayoutManager layoutManager = new GridLayoutManager(getApplicationContext(), 2);
         rv.setLayoutManager(layoutManager);
         rv.setAdapter(adapter);
-        if(teachername!=null) {
+        if(teachername!=null&&value!=null){
+            Query nm = FirebaseDatabase.getInstance().getReference("Attendence").orderByChild("teacherName")
+                    .equalTo(teachername);
+            nm.addListenerForSingleValueEvent(valueEventListener);
+        }
+        else if(teachername!=null) {
             Query nm = FirebaseDatabase.getInstance().getReference("teachers").orderByChild("teacherName")
                     .equalTo(teachername);
             nm.addListenerForSingleValueEvent(valueEventListener);
 
         }
         else if(student!=null){
-            Query query1=FirebaseDatabase.getInstance().getReference("teachers").child("attendee list");
+            //Query query1=FirebaseDatabase.getInstance().getReference("teachers").child("attendee list");
             Toast.makeText(this, ""+sDivision, Toast.LENGTH_SHORT).show();
-            Query query=FirebaseDatabase.getInstance().getReference("teachers").orderByChild("selectedDivision")
+            Query query=FirebaseDatabase.getInstance().getReference("Attendence").orderByChild("selectedDivision")
                     .equalTo(sDivision);
             query.addListenerForSingleValueEvent(valueEventListener);
         }

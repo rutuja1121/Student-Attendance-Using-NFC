@@ -28,7 +28,7 @@ public class Scan extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i=new Intent(Scan.this,Marked.class);
                 startActivity(i);
-                DatabaseReference reference=FirebaseDatabase.getInstance().getReference("teachers").child(str).child("attendee list");
+                DatabaseReference reference=FirebaseDatabase.getInstance().getReference("Attendence").child(str).child("attendee list");
                 String id=reference.push().getKey();
                 Classes classes=new Classes(student);
                 reference.child(id).setValue(classes);
