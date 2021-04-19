@@ -37,11 +37,21 @@ class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder>{
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Classes ld=listData.get(position);
-//        holder.txtid.setText(ld.teacherId);
+   //holder.txtid.setText(ld.teacherId);
 
         if(teacherName!=null&&value!=null) {
             holder.txtname.setText(ld.selectedSubject);
             holder.txtmovie.setText(ld.selectedDivision);
+            holder.cardView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent i =new Intent(context,Present_absent_list.class);
+                    i.putExtra("teacher id",ld.teacherId);
+
+                    context.startActivity(i);
+                }
+            });
+
         }
        else if(teacherName!=null){
             holder.txtname.setText(ld.selectedSubject);
