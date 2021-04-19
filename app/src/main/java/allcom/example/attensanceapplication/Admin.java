@@ -44,8 +44,12 @@ public class Admin extends AppCompatActivity {
                     Intent intent=new Intent(Admin.this,Update_Page.class);//Select_year_teacher
                     startActivity(intent);
                 }
-                else if(FindButton.getText().equals("Set Attendance")){
+                else if(FindButton.getText().equals("Set Subject")){
                     Intent intent=new Intent(getApplicationContext(),Select_year_teacher.class);
+                    startActivity(intent);
+                }
+                else if(FindButton.getText().equals("Set Class On NFC")){
+                    Intent intent=new Intent(getApplicationContext(),SetNFC.class);
                     startActivity(intent);
                 }
             }

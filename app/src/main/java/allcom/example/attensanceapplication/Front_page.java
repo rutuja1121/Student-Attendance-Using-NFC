@@ -36,7 +36,7 @@ Login_Page l1=new Login_Page();
                       finish();
                   }
                   else if(documentSnapshot.getString("userType").equals("student")){
-                      Intent i =new Intent(Front_page.this,ViewAttendanceList.class);
+                      Intent i =new Intent(Front_page.this,StudentMainPage.class);
                       i.putExtra("Student name",documentSnapshot.get("Name3").toString());
                       i.putExtra("Division",documentSnapshot.get("Division3").toString());
                       startActivity(i);

@@ -3,6 +3,7 @@
     package="allcom.example.attensanceapplication">
 
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.NFC" />
 
     <application
         android:allowBackup="true"
@@ -18,10 +19,10 @@
         <activity android:name=".UsersCategoty" />
         <activity android:name=".NewUserTeacher" />
         <activity android:name=".GetOtp" />
-        <activity android:name=".report" />
+        <activity android:name=".StudentMainPage" />
         <activity android:name=".View_attendanec_report" />
         <activity android:name=".Update_Page" />
-        <activity android:name=".View_edit_Details" />
+        <activity android:name=".SetNFC" />
         <activity android:name=".Student_details" />
         <activity android:name=".Add_Class" />
         <activity android:name=".Teacher_Details" />

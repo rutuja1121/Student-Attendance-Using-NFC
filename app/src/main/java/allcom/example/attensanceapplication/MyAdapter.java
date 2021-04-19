@@ -16,15 +16,16 @@ import java.util.List;
 class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder>{
     private List<Classes> listData;
     private String teacherName;
-    private String student,value;
+    private String student,value,sDivision;
 
     Context context;
-    public MyAdapter(Context context, List<Classes> listData, String teacherName, String student,String value) {
+    public MyAdapter(Context context, List<Classes> listData, String teacherName, String student,String value,String sDivision) {
         this.listData = listData;
         this.teacherName=teacherName;
         this.student=student;
         this.context=context;
         this.value=value;
+        this.sDivision=sDivision;
     }
 
     @NonNull
@@ -69,6 +70,7 @@ class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder>{
                     Intent i =new Intent(context,Scan.class);
                     i.putExtra("teacher id",ld.teacherId);
                     i.putExtra("student name",student);
+                    i.putExtra("student division",sDivision);
                     context.startActivity(i);
                 }
             });
