@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Select_year_teacher"
+    android:background="#3B7393">
+
+
+    <TextView
+        android:id="@+id/Teachers7"
+        android:layout_width="224dp"
+        android:layout_height="108dp"
+        android:text="Student's"
+        android:textAlignment="center"
+        android:textColor="#0C0C0C"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.071" />
+
+    <TextView
+        android:id="@+id/teachers"
+        android:layout_width="353dp"
+        android:layout_height="105dp"
+        android:text="Attendance            Page"
+        android:textAlignment="center"
+        android:textColor="#0C0C0C"
+        android:textSize="37sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.193" />
+
+    <Button
+        android:id="@+id/attendance"
+        android:layout_width="230dp"
+        android:layout_height="76dp"
+        android:layout_marginTop="62dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/round_for_submit"
+        android:text="Give Attendance"
+        android:textColor="#ffffff"
+        android:textSize="26dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/teachers"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <Button
+        android:id="@+id/Logout"
+        android:layout_width="237dp"
+        android:layout_height="67dp"
+        android:background="@drawable/round_for_submit"
+        android:text="Log-out"
+        android:textColor="#ffffff"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.528"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/attendance"
+        app:layout_constraintVertical_bias="0.259" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

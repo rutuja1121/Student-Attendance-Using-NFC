@@ -74,7 +74,7 @@ public class Login_Page extends AppCompatActivity {
                         Toast.makeText(getApplicationContext(),"valid email address",Toast.LENGTH_SHORT);
                     } else  {
                         Toast.makeText(getApplicationContext(),"Invalid email address", Toast.LENGTH_SHORT).show();
-                        return;
+
                     }
                 }
 
@@ -97,7 +97,7 @@ public class Login_Page extends AppCompatActivity {
                                 }
 
                                 else if(documentSnapshot.getString("userType").equals("student")){
-                                    Intent i=new Intent(Login_Page.this,ViewAttendanceList.class);
+                                    Intent i=new Intent(Login_Page.this,StudentMainPage.class);
                                     i.putExtra("Student name",documentSnapshot.get("Name3").toString());
                                     i.putExtra("Division",documentSnapshot.get("Division3").toString());
                                     startActivity(i);

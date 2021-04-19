@@ -33,7 +33,7 @@ public class ViewAttendanceList extends AppCompatActivity {
     private MyAdapter adapter;
     private ProgressBar mProgressBar;
     String value;
-    String teachername,student;
+    String teachername,student,sDivision;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,10 +45,11 @@ public class ViewAttendanceList extends AppCompatActivity {
         student= getIntent().getStringExtra("Student name");
         teachername=getIntent().getStringExtra("Teacher name");
         value=getIntent().getStringExtra("value");
-        String sDivision=getIntent().getStringExtra("Division");
+        sDivision=getIntent().getStringExtra("Division");
+        Toast.makeText(this, ""+sDivision+" "+student, Toast.LENGTH_SHORT).show();
        // Toast.makeText(this, ""+student, Toast.LENGTH_SHORT).show();
         listData = new ArrayList<>();
-        adapter = new MyAdapter(ViewAttendanceList.this,listData,teachername,student,value);
+        adapter = new MyAdapter(ViewAttendanceList.this,listData,teachername,student,value,sDivision);
         RecyclerView.LayoutManager layoutManager = new GridLayoutManager(getApplicationContext(), 2);
         rv.setLayoutManager(layoutManager);
         rv.setAdapter(adapter);

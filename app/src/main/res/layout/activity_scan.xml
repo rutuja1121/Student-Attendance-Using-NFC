@@ -29,19 +29,7 @@
             android:textSize="40dp" />
     </FrameLayout>
 
-    <Button
-        android:id="@+id/log"
-        android:layout_width="176dp"
-        android:layout_height="59dp"
-        android:background="@drawable/round_for_submit"
-        android:text="Submit"
-        android:textSize="32dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.976" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -51,10 +51,10 @@
 
     <RadioGroup
         android:id="@+id/maingrp"
-        android:layout_width="311dp"
-        android:layout_height="342dp"
-        android:padding="20dp"
+        android:layout_width="312dp"
+        android:layout_height="415dp"
         android:layout_marginTop="30dp"
+        android:padding="20dp"
 
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -65,17 +65,17 @@
             android:id="@+id/Add_Teacher"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
             android:text="Add Teacher"
             android:textColor="#FFFFFF"
-            android:layout_marginBottom="20dp"
             android:textSize="30sp" />
 
         <RadioButton
             android:id="@+id/Add_Class"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Add class"
             android:layout_marginBottom="20dp"
+            android:text="Add class"
             android:textColor="#FFFFFF"
             android:textSize="30sp" />
 
@@ -83,8 +83,8 @@
             android:id="@+id/Add_Student"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Add Student"
             android:layout_marginBottom="20dp"
+            android:text="Add Student"
             android:textColor="#FFFFFF"
             android:textSize="30sp" />
 
@@ -92,8 +92,8 @@
             android:id="@+id/Edit_Details"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="View/Edit Details"
             android:layout_marginBottom="20dp"
+            android:text="View/Edit Details"
             android:textColor="#FFFFFF"
             android:textSize="30sp" />
 
@@ -102,7 +102,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
-            android:text="Set Attendance"
+            android:text="Set Subject"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp" />
+
+        <RadioButton
+            android:id="@+id/edit_Details2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="Set Class On NFC"
             android:textColor="#FFFFFF"
             android:textSize="30sp" />
     </RadioGroup>
