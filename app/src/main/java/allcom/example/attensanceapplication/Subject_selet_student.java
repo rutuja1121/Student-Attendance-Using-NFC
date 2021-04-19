@@ -12,7 +12,7 @@ import java.util.List;
 
 public class Subject_selet_student extends Activity {
 
-    allcom.example.attensanceapplication.ExpandableListAdapter listAdapter;
+    ExpandableListAdapter listAdapter;
     ExpandableListView expListView;
     List<String> listDataHeader;
     HashMap<String, List<String>> listDataChild;

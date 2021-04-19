@@ -20,11 +20,11 @@ import java.nio.charset.Charset;
 
 public class NFCWriteFragment extends DialogFragment {
 
-    public static final String TAG = allcom.example.attensanceapplication.NFCWriteFragment.class.getSimpleName();
+    public static final String TAG = NFCWriteFragment.class.getSimpleName();
 
-    public static allcom.example.attensanceapplication.NFCWriteFragment newInstance() {
+    public static NFCWriteFragment newInstance() {
 
-        return new allcom.example.attensanceapplication.NFCWriteFragment();
+        return new NFCWriteFragment();
     }
 
     private TextView mTvMessage;

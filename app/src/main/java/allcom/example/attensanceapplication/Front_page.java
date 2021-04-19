@@ -40,7 +40,7 @@ Login_Page l1=new Login_Page();
                       i.putExtra("Student name",documentSnapshot.get("Name3").toString());
                       i.putExtra("Division",documentSnapshot.get("Division3").toString());
                       startActivity(i);
-
+                      finish();
                   }
               });
           }else {

@@ -25,7 +25,6 @@ public class StudentMainPage extends AppCompatActivity {
                 i.putExtra("Student name",sName);
                 i.putExtra("Division",sDivision);
                 startActivity(i);
-                finish();
             }
         });
         Logout.setOnClickListener(new View.OnClickListener() {

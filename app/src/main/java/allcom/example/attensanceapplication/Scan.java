@@ -45,6 +45,11 @@ public class Scan extends AppCompatActivity {
                     Toast.LENGTH_SHORT).show();
             t1.setText("Your Phone Does Not Support NFC");
             i=1;
+        }else if (!nfcAdapter.isEnabled()) {
+            // NFC is available for device but not enabled
+            t1.setText("NFC is Not enabled");
+        }else{
+            t1.setText("Scan/Tap your NFC Tag");
         }
         pendingIntent = PendingIntent.getActivity(this,0,new Intent(this,this.getClass()).addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP),0);
 
