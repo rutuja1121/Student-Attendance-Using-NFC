@@ -45,7 +45,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="28dp"
-        android:text=" Qualification"
+        android:text=" Password"
         android:textAlignment="center"
         android:textColor="#0C0C0C"
         android:textSize="24dp"
@@ -130,8 +130,8 @@
         android:ems="10"
 
 
-        android:hint="Enter Qualification"
-        android:inputType="textPersonName"
+        android:hint="Enter Password"
+        android:inputType="textPassword"
         android:paddingLeft="14dp"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/udatesubmitbutton"

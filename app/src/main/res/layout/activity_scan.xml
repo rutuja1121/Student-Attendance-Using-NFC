@@ -22,7 +22,7 @@
     </FrameLayout>
 
     <TextView
-        android:id="@+id/textView15"
+        android:id="@+id/textView2"
         android:layout_width="304dp"
         android:layout_height="304dp"
         android:text="Scan / Tap NFC Tag"

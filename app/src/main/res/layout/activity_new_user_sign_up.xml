@@ -111,22 +111,22 @@ android:background="#3B7393">
 
     <Spinner
         android:id="@+id/Academicyear"
-        android:layout_width="300dp"
+        android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:background="@drawable/round"
         android:entries="@array/academcicYear"
-        android:paddingLeft="14dp"
+        android:paddingLeft="4dp"
         android:spinnerMode="dropdown"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.603"
+        app:layout_constraintHorizontal_bias="0.866"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.808" />
+        app:layout_constraintVertical_bias="0.567" />
 
-    <EditText
+    <TextView
         android:id="@+id/AcademicYear3"
-        android:layout_width="300dp"
+        android:layout_width="190dp"
         android:layout_height="40dp"
         android:background="@drawable/round"
         android:ems="10"
@@ -136,18 +136,18 @@ android:background="#3B7393">
         android:textSize="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.603"
+        app:layout_constraintHorizontal_bias="0.29"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.571" />
+        app:layout_constraintVertical_bias="0.567" />
 
     <EditText
-        android:id="@+id/NfcTag3"
+        android:id="@+id/Rollno3"
         android:layout_width="300dp"
         android:layout_height="40dp"
         android:background="@drawable/round"
         android:ems="10"
-        android:hint="Enter NFC Tag ID"
+        android:hint="Enter Roll No."
         android:inputType="textPersonName"
         android:paddingLeft="14dp"
         android:textSize="24dp"
