@@ -16,16 +16,17 @@ import java.util.List;
 class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder>{
     private List<Classes> listData;
     private String teacherName;
-    private String student,value,sDivision;
+    private String student,value,sDivision,sRoll;
 
     Context context;
-    public MyAdapter(Context context, List<Classes> listData, String teacherName, String student,String value,String sDivision) {
+    public MyAdapter(Context context, List<Classes> listData, String teacherName, String student,String value,String sDivision,String sRoll) {
         this.listData = listData;
         this.teacherName=teacherName;
         this.student=student;
         this.context=context;
         this.value=value;
         this.sDivision=sDivision;
+        this.sRoll=sRoll;
     }
 
     @NonNull
@@ -82,6 +83,7 @@ class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder>{
                     i.putExtra("teacher id",ld.teacherId);
                     i.putExtra("student name",student);
                     i.putExtra("student division",sDivision);
+                    i.putExtra("Student roll",sRoll);
                     context.startActivity(i);
                 }
             });

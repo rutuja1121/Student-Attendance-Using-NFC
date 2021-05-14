@@ -32,7 +32,7 @@ public class AdapterRec extends RecyclerView.Adapter<AdapterRec.ViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Classes class1=listData.get(position);
-        holder.rectxt.setText(class1.studentName);
+        holder.rectxt.setText("  "+class1.sRoll+".    "+class1.studentName);
         System.out.println("hellooooo "+class1.studentName);
     }
 

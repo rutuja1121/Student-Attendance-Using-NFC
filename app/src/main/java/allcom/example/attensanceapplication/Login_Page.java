@@ -99,6 +99,7 @@ public class Login_Page extends AppCompatActivity {
                                 else if(documentSnapshot.getString("userType").equals("student")){
                                     Intent i=new Intent(Login_Page.this,StudentMainPage.class);
                                     i.putExtra("Student name",documentSnapshot.get("Name3").toString());
+                                    i.putExtra("Student roll",documentSnapshot.get("Rollno3").toString());
                                     i.putExtra("Division",documentSnapshot.get("Division3").toString());
                                     startActivity(i);
                                     i1=2;

@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class StudentMainPage extends AppCompatActivity {
     Button attendance,Logout;
-    String sName,sDivision;
+    String sName,sDivision,sRoll;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,6 +17,7 @@ public class StudentMainPage extends AppCompatActivity {
         attendance=findViewById(R.id.attendance);
         Logout=findViewById(R.id.Logout);
         sName= getIntent().getStringExtra("Student name");
+        sRoll=getIntent().getStringExtra("Student roll");
         sDivision=getIntent().getStringExtra("Division");
         attendance.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -24,6 +25,7 @@ public class StudentMainPage extends AppCompatActivity {
                 Intent i=new Intent(getApplicationContext(),ViewAttendanceList.class);
                 i.putExtra("Student name",sName);
                 i.putExtra("Division",sDivision);
+                i.putExtra("Student roll",sRoll);
                 startActivity(i);
             }
         });

@@ -23,7 +23,7 @@ import java.io.IOException;
 
 public class Scan extends AppCompatActivity {
     Button sunmit;
-    String student,sDivision,str;
+    String student,sDivision,str,sRoll;
     NfcAdapter nfcAdapter;
     PendingIntent pendingIntent;
     TextView t1;
@@ -36,6 +36,7 @@ public class Scan extends AppCompatActivity {
 
         nfcAdapter = NfcAdapter.getDefaultAdapter(this);
         sDivision=getIntent().getStringExtra("student division");
+        sRoll=getIntent().getStringExtra("Student roll");
         str=getIntent().getStringExtra("teacher id");
         student=getIntent().getStringExtra("student name");
        // Toast.makeText(this, ""+student, Toast.LENGTH_SHORT).show();
@@ -101,10 +102,11 @@ public class Scan extends AppCompatActivity {
                 Intent i=new Intent(Scan.this,Marked.class);
                 i.putExtra("student name",student);
                 i.putExtra("student division",sDivision);
+                i.putExtra("Student roll",sRoll);
                 startActivity(i);
                 DatabaseReference reference=FirebaseDatabase.getInstance().getReference("Attendence").child(str).child("attendee list");
                 String id=reference.push().getKey();
-                Classes classes=new Classes(student);
+                Classes classes=new Classes(student,sRoll);
                 reference.child(id).setValue(classes);
                 Toast.makeText(Scan.this, "Attendance Taken", Toast.LENGTH_SHORT).show();
                 finishAffinity();

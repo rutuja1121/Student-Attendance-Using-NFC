@@ -63,13 +63,6 @@ public class Present_absent_list extends AppCompatActivity {
     }
 
 
-
-
-
-
-
-
-
     ValueEventListener valueEventListener = new ValueEventListener() {
         @Override
         public void onDataChange(@NonNull DataSnapshot snapshot) {
