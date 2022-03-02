@@ -24,7 +24,7 @@ Features included:
 <table>
 <tr>
     <td><img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Android_Studio_Icon_%282014-2019%29.svg/1200px-Android_Studio_Icon_%282014-2019%29.svg.png" alt="Android Studio" width="50" height="50"></td>
-    <td>Firebase</td>
+    <td>Android Studio</td>
   </tr>  
 </table>
 
