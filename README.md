@@ -1,4 +1,4 @@
-# Garbha Sanskar with ANC
+# Student attendance system
 
 Student attendance using ANC
 <br>Part of college project 2020-2021
