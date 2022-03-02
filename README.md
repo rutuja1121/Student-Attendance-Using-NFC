@@ -1,6 +1,6 @@
 # Student attendance system
 
-Student attendance using ANC
+Student attendance using NFC
 <br>Part of college project 2020-2021
 
 ## About the project
