@@ -18,6 +18,17 @@ Features included:
 - No paper work
 - Generate attendance report of individual student 
 
+Screenshots:
+
+
+![Attedance1](https://user-images.githubusercontent.com/65657589/182834890-2ddc473d-3b02-4dc1-af63-39fd9bde626e.PNG)
+![attendace4](https://user-images.githubusercontent.com/65657589/182834897-51d2b670-7f7b-4709-b7e0-9e4047c43061.PNG)
+![attendance2](https://user-images.githubusercontent.com/65657589/182834903-a70e8f5d-f93f-4713-bf1b-d8cef47f491a.PNG)
+![attendance5](https://user-images.githubusercontent.com/65657589/182834907-56262593-b391-49e8-8621-cd6f16c33ddc.PNG)
+
+![attendance6](https://user-images.githubusercontent.com/65657589/182834912-7cea8df3-962e-438c-ba42-0bbfa90075aa.PNG)
+![attendande3](https://user-images.githubusercontent.com/65657589/182834915-adbc73be-2d5f-4427-9368-24e339c995a9.PNG)
+
 
 
 ## Tech stack
